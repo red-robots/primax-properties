@@ -44,8 +44,8 @@ get_header(); ?>
 	} elseif($title == 'Connecticut') {$dataState = 'ct';$letter = 'G';
 	} elseif($title == 'Delaware') {$dataState = 'de';$letter = 'H';
 	} elseif($title == 'DC') {$dataState = 'dc';$letter = 'I';
-	} elseif($title == 'Georgia') {$dataState = 'ga';$letter = 'J';
-	} elseif($title == 'Florida') {$dataState = 'fl';$letter = 'K';
+	} elseif($title == 'Florida') {$dataState = 'fl';$letter = 'J';
+	} elseif($title == 'Georgia') {$dataState = 'ga';$letter = 'K';
 	} elseif($title == 'Hiawai') {$dataState = 'hi';$letter = 'L';
 	} elseif($title == 'Idaho') {$dataState = 'id';$letter = 'M';
 	} elseif($title == 'Illinois') {$dataState = 'il';$letter = 'N';
