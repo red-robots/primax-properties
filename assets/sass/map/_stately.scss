@@ -1,0 +1,76 @@
+$map_width: 800px;
+$map_bgd_color: rgba(0,0,0,0);
+$map_border_radius: 0;
+
+/** Stately setup
+*************************************/
+@import "setup";
+
+/** Style customizations
+*************************************/
+@import "customizations";
+
+
+/*--------------------------------------------------------------
+## Map Colors
+*/
+.yes {
+  color: $color-green;
+}
+.no-properties {
+  color:  $color-gold;
+}
+.displaynone {
+	max-height: 0;
+	background-color: rgba(255,255,255,0);
+	border: 0px solid #333;
+	padding: 0 20px 0;
+	overflow: hidden;
+	color: rgba(0,0,0,0);
+}
+.open {
+	max-height: 1000px;
+	background-color: rgba(255,255,255,.9);
+	border: 1px solid #333;
+	padding: 20px;
+	color: rgba(0,0,0,.9);
+}
+.al {
+	width: auto;
+	position: absolute;
+	bottom: 240px;
+    right: 215px;
+}
+.ga {
+	width: auto;
+	position: absolute;
+	bottom: 240px;
+    right: 160px;
+}
+.count {
+	width: 50px;
+	height: 50px;
+	border: 1px solid #333;
+	font-size: 24px;
+	line-height: 50px;
+	border-radius: 50%;
+	text-align: center;
+	background-color: rgba(255,255,255,.6);
+}
+#js-target {
+	width: 300px;
+	height: auto;
+	position: absolute;
+	right: -125px;
+	bottom: 70px; 
+	
+	@include transition(all ease .1s);
+	
+}
+#states {
+	width: $map_width;
+	height: 640px;
+	margin: 0px auto;
+	position: relative;
+	clear: both;
+}
