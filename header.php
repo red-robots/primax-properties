@@ -24,7 +24,15 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'acstarter' ); ?></a>
 
-	<header id="masthead" class="site-header" role="banner">
+	<?php 
+		if( is_front_page() ) { 
+			$headerClass = 'masthead-home';
+		} else {
+			$headerClass = 'masthead';
+		}
+	?>
+
+	<header id="<?php echo $headerClass; ?>" class="site-header" role="banner">
 		<div class="wrapper">
 			
 			<?php if(is_home()) { ?>
@@ -42,6 +50,11 @@
 				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 			</nav><!-- #site-navigation -->
 	</div><!-- wrapper -->
+
+<div class="arrow">
+	<i class="fa fa-play fa-rotate-90 " aria-hidden="true"></i>
+</div>
+
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content wrapper">

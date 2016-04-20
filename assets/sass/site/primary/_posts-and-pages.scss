@@ -26,3 +26,20 @@
 	clear: both;
 	margin: 0 0 1.5em;
 }
+header.home {
+	margin: 50px auto;
+	color: $color-green;
+
+	h2, h3 {
+		width: 100%;
+		text-align: center;
+		weight: 400;
+	}
+}
+.homemap {
+	width: 80%;
+	margin: 30px auto;
+	img {
+		width: 100%;
+	}
+}

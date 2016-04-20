@@ -8,7 +8,11 @@
  *
  * @package ACStarter
  */
-
+$address = get_field('address', 'option');
+$phone = get_field('phone', 'option');
+$fax = get_field('fax', 'option');
+$linkedin = get_field('linkedin_link', 'option');
+$sitemapLink = get_field('sitemap_link', 'option');
 ?>
 
 	</div><!-- #content -->
@@ -16,15 +20,31 @@
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="wrapper">
 			<div class="site-info">
-				<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'acstarter' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'acstarter' ), 'WordPress' ); ?></a>
-				<span class="sep"> | </span>
-				<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'acstarter' ), 'acstarter', '<a href="http://underscores.me/" rel="designer">Underscores.me</a>' ); ?>
+
+				<?php 
+					echo $address;
+					echo '<br>';
+					echo 'Phone: ' . $phone . ' • ' . 'Fax: ' . $fax;
+
+
+				 ?>
+
+				<div class="linkedin">
+				 	<i class="fa fa-linkedin fa-2x" aria-hidden="true"><a href="<?php echo $linkedin; ?>">linkedin</a></i>
+				</div>
+
+				<div class="copywrite">&copyCopyright 2016- Primax Properties, LLC. - All Rights Reserved</div>
+				<div class="creds">sitemap | site by bellaworks</div>
+
 			</div><!-- .site-info -->
+
+			
+	
 	</div><!-- wrapper -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
-
+<?php the_field('google_analytics', 'option'); ?>
 </body>
 </html>

@@ -14,43 +14,31 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
+	<div id="primary" class="">
 		<main id="main" class="site-main" role="main">
 
-		<?php
-		if ( have_posts() ) :
+			<header class="home">
+				<h2>REPRESENTATIVE PROJECTS</h2>
+				<h3>Our focus is on doing what we do exceptionally well.</h3>
+			</header>
 
-			if ( is_home() && ! is_front_page() ) : ?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
 
-			<?php
-			endif;
+some projects...
 
-			/* Start the Loop */
-			while ( have_posts() ) : the_post();
 
-				/*
-				 * Include the Post-Format-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_format() );
 
-			endwhile;
+			<header class="home">
+				<h2>NATIONAL REACH?  CHECK.</h2>
+				<h3>Wherever you go, we go.</h3>
+			</header>
 
-			the_posts_navigation();
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif; ?>
+			<div class="homemap">
+				<img src="<?php bloginfo('template_url'); ?>/images/map.jpg">
+			</div>
+		
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
 get_footer();
