@@ -49,12 +49,34 @@
 				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'acstarter' ); ?></button>
 				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 			</nav><!-- #site-navigation -->
+
+			<?php if( is_front_page() ) {
+
+					// Pull the Homepage
+					$post = get_post(119); 
+					setup_postdata( $post );
+					 
+						$heroLineOne = get_field('hero_line_1');
+						$heroLineTwo = get_field('hero_line_2');
+
+					wp_reset_postdata();
+				?>
+
+				<header class="hero">
+					<h2 class="  wow zoomIn" data-wow-duration=".5s"><?php echo $heroLineOne; ?></h2>
+					<p class="  wow zoomIn" data-wow-duration=".8s"><?php echo $heroLineTwo; ?></p>
+				</header>
+
+			<?php } ?>
+
 	</div><!-- wrapper -->
 
-<div class="arrow">
-	<i class="fa fa-play fa-rotate-90 " aria-hidden="true"></i>
-</div>
+<?php if( is_front_page() ) {  ?>
+	<div class="arrow">
+		<i class="fa fa-play fa-rotate-90 " aria-hidden="true"></i>
+	</div>
+<?php } ?>
 
 	</header><!-- #masthead -->
 
-	<div id="content" class="site-content wrapper">
+	<div id="content" class="site-content">

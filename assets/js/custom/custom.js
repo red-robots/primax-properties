@@ -38,6 +38,13 @@ jQuery(document).ready(function ($) {
 		height: '80%'
 	});
 	
+	// For the projects
+	$(".project").colorbox({
+		inline:true, 
+		width:"80%",
+		rel:'gal'
+	});
+	
 	/*
 	*
 	*	Isotope with Images Loaded
