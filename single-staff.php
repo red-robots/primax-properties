@@ -8,6 +8,9 @@
  */
 
 get_header(); ?>
+
+
+
 <div class="wrapper">
 
 <heading class="staff">Our Professionals</heading>
@@ -38,7 +41,7 @@ get_header(); ?>
 			</div>
 
 			<div class="single-staff-info">
-				<h1><?php the_title(); ?></h1>
+				<h1  class="entry-title"><?php the_title(); ?></h1>
 				<?php if( $position != '' ) { ?>
 					<div class="detail"><?php echo $position; ?></div>
 				<?php } ?>
@@ -57,6 +60,8 @@ get_header(); ?>
 						<a href="<?php echo $vcard; ?>">Contact Info</a>
 					</div>
 				<?php } ?>
+
+				<div class="staff-border"></div>
 
 				<div class="single-staff-bio">
 					<?php echo $description_bio; ?>
@@ -99,5 +104,13 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 </div>
+
+<div class="next-staff">
+	<?php next_post_link( '%link', 'NEXT' ); ?>
+</div>
+<div class="prev-staff">
+	<?php previous_post_link( '%link', 'BACK' ); ?>
+</div>
+
 <?php
 get_footer();

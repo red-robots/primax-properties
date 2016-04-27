@@ -3,8 +3,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1.entry-title {
-	font-size: 30px;
+	font: {
+		size: 30px;
+		weight: 400;
+	}
 	color: $color-green;
 	letter-spacing: 3px;
 	text-transform: uppercase;
+	margin: 0 0 15px 0;
+	line-height: 1;
 }
