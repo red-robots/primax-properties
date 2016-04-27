@@ -154,3 +154,14 @@ function wpb_change_title_text( $title ){
 }
  
 add_filter( 'enter_title_here', 'wpb_change_title_text' );
+/*-------------------------------------
+
+  Add V card support
+
+---------------------------------------*/
+add_filter('upload_mimes', 'custom_upload_mimes');
+function custom_upload_mimes ( $existing_mimes=array() ) {
+// add your extension to the array
+$existing_mimes['vcf'] = 'text/x-vcard';
+return $existing_mimes;
+}

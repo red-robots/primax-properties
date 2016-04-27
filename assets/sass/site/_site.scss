@@ -168,6 +168,18 @@ div {
 		padding: 0px;
 	}
 }
+.wrapper-no-pad {
+	width: 100%;
+	margin: 0px auto;
+	padding: 0;
+	
+	@media screen and (min-width: $tabwidth) {
+		width: 100%;
+	}
+	@media screen and (min-width: $deskwidth) {
+		width: 1200px;
+	}
+}
 
 .content-area {
 	width: 100%;
