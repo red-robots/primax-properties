@@ -637,3 +637,24 @@ section.education {
 
 	}
 }
+.page-subnav {
+	margin: 20px 0 30px -15px;
+	li {
+		width: auto;
+		display: inline-block;
+		border-right: 1px solid #333;
+		padding: 0 15px;
+	}
+	a {
+		border-bottom: 3px solid #fff;
+		text-decoration: none;
+		color: #000;
+		padding: 0;
+	}
+	a.active, a:hover {
+		border-bottom: 3px solid $color-green;
+	}
+	li:last-child {
+		border-right: 0px solid #333;
+	}
+}

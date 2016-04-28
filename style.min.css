@@ -1236,7 +1236,8 @@ td,th{padding:0}
 button:focus{outline:0}
 body,button,input,select,textarea{color:#404040;font-family:"Hind Vadodara",sans-serif;font-size:16px;font-size:1rem;line-height:1.5}
 h1,h2,h3,h4,h5,h6{clear:both}
-h1.entry-title{font-size:30px;font-weight:400;color:#006140;letter-spacing:3px;text-transform:uppercase;margin:0 0 15px 0;line-height:1}
+h1.entry-title{font-size:30px;font-weight:400;color:#006140;letter-spacing:3px;text-transform:uppercase;margin:15px 0 15px 0;line-height:1}
+h1.entry-title-staff{font-size:30px;font-weight:400;color:#006140;letter-spacing:3px;text-transform:uppercase;margin:0 0 15px 0;line-height:1}
 p{margin-bottom:1.5em}
 dfn,cite,em,i{font-style:italic}
 blockquote{margin:0 1.5em}
@@ -1290,7 +1291,7 @@ a:hover,a:active{outline:0}
 .main-navigation li{position:relative;margin:5px 0;width:100%;font-size:16px;font-weight:400;line-height:3;display:inline-block}
 @media screen and (min-width:600px){.main-navigation li{font-size:14px;margin:0 5px 0 5px;width:auto}
 }@media screen and (min-width:900px){.main-navigation li{font-size:16px;margin:0 0 0 10px;float:left}
-}@media screen and (min-width:1200px){.main-navigation li{font-size:16px;margin:0 0 0 30px}
+}@media screen and (min-width:1200px){.main-navigation li{font-size:16px;margin:0 0 0 25px}
 }.main-navigation a{display:block;text-decoration:none;color:white;padding:0 20px;-webkit-transition:all .2s ease;transition:all .2s ease}
 @media screen and (min-width:600px){.main-navigation a{padding:0 5px}
 }@media screen and (min-width:900px){.main-navigation a{padding:0 5px}
@@ -1526,6 +1527,11 @@ heading.staff{color:#006140;text-transform:uppercase;letter-spacing:3px;width:10
 }.prev-staff a:hover{padding:8px 20px 8px 30px}
 section.education{width:100%;margin:0 0 30px 0}
 section.education h2{color:#006140;text-transform:uppercase;margin:0;font-size:14px;font-weight:500}
+.page-subnav{margin:20px 0 30px -15px}
+.page-subnav li{width:auto;display:inline-block;border-right:1px solid #333;padding:0 15px}
+.page-subnav a{border-bottom:3px solid #fff;text-decoration:none;color:#000;padding:0}
+.page-subnav a.active,.page-subnav a:hover{border-bottom:3px solid #006140}
+.page-subnav li:last-child{border-right:0 solid #333}
 .blog .format-aside .entry-title,.archive .format-aside .entry-title{display:none}
 .comment-content a{word-wrap:break-word}
 .bypostauthor{display:block}
@@ -1555,17 +1561,20 @@ section.education h2{color:#006140;text-transform:uppercase;margin:0;font-size:1
 }div{-ms-hyphens:auto;-moz-hyphens:auto;-webkit-hyphens:auto;hyphens:auto}
 .wrapper{width:100%;margin:0 auto;padding:20px}
 @media screen and (min-width:600px){.wrapper{width:100%}
-}@media screen and (min-width:1200px){.wrapper{width:1200px;padding:0}
+}@media screen and (min-width:1200px){.wrapper{width:90%;padding:0}
+}.wrapper-default-page{width:96%;margin:0 auto;padding:0}
+@media screen and (min-width:600px){.wrapper-default-page{width:95.5%;margin:0;float:right}
+}@media screen and (min-width:1200px){.wrapper-default-page{width:93.5%;padding:0}
 }.wrapper-no-pad{width:100%;margin:0 auto;padding:0}
 @media screen and (min-width:600px){.wrapper-no-pad{width:100%}
-}@media screen and (min-width:1200px){.wrapper-no-pad{width:1200px}
+}@media screen and (min-width:1200px){.wrapper-no-pad{width:90%}
 }.content-area{width:100%;margin:0 auto}
 @media screen and (min-width:600px){.content-area{width:66%;float:left;margin:0}
 }@media screen and (min-width:1200px){}
-.widget-area{width:100%;margin:0 auto}
+.widget-area{width:100%;margin:0 auto;background-color:rgba(174,151,109,0.7)}
 @media screen and (min-width:600px){.widget-area{width:26%;float:right;margin:0}
-}@media screen and (min-width:1200px){}
-.logo,h1.logo{width:250px;height:87px;margin:0 auto;background-image:url(images/logo.png);background-size:cover;background-repeat:no-repeat}
+}@media screen and (min-width:1200px){.widget-area{padding:135px 0}
+}.logo,h1.logo{width:250px;height:87px;margin:0 auto;background-image:url(images/logo.png);background-size:cover;background-repeat:no-repeat}
 @media screen and (min-width:600px){.logo,h1.logo{width:250px;height:87px;margin:-20px auto 0}
 }@media screen and (min-width:900px){.logo,h1.logo{float:left;margin:0}
 }@media screen and (min-width:1200px){.logo,h1.logo{width:300px;height:104px}

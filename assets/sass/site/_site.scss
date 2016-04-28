@@ -164,8 +164,24 @@ div {
 		width: 100%;
 	}
 	@media screen and (min-width: $deskwidth) {
-		width: 1200px;
+		width: 90%;
 		padding: 0px;
+	}
+}
+.wrapper-default-page {
+	width: 96%;
+	margin: 0px auto;
+	padding: 0px;
+	
+	@media screen and (min-width: $tabwidth) {
+		width: 95.5%;
+		margin: 0;
+		float: right;
+	}
+	@media screen and (min-width: $deskwidth) {
+		width: 93.5%;
+		padding: 0px;
+		
 	}
 }
 .wrapper-no-pad {
@@ -177,7 +193,7 @@ div {
 		width: 100%;
 	}
 	@media screen and (min-width: $deskwidth) {
-		width: 1200px;
+		width: 90%;
 	}
 }
 
@@ -198,6 +214,7 @@ div {
 .widget-area {
 	width: 100%;
 	margin: 0px auto;
+	background-color: rgba($color-gold, .7);
 	
 	@media screen and (min-width: $tabwidth) {
 		width: 26%;
@@ -206,6 +223,7 @@ div {
 	}
 	@media screen and (min-width: $deskwidth) {
 		/*width: 1200px;*/
+		padding: 135px 0;
 	}
 }
 

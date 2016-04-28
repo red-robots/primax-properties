@@ -10,6 +10,17 @@ h1.entry-title {
 	color: $color-green;
 	letter-spacing: 3px;
 	text-transform: uppercase;
+	margin: 15px 0 15px 0;
+	line-height: 1;
+}
+h1.entry-title-staff {
+	font: {
+		size: 30px;
+		weight: 400;
+	}
+	color: $color-green;
+	letter-spacing: 3px;
+	text-transform: uppercase;
 	margin: 0 0 15px 0;
 	line-height: 1;
 }

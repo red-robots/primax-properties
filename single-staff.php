@@ -41,7 +41,7 @@ get_header(); ?>
 			</div>
 
 			<div class="single-staff-info">
-				<h1  class="entry-title"><?php the_title(); ?></h1>
+				<h1  class="entry-title-staff"><?php the_title(); ?></h1>
 				<?php if( $position != '' ) { ?>
 					<div class="detail"><?php echo $position; ?></div>
 				<?php } ?>

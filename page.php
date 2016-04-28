@@ -13,9 +13,11 @@
  */
 
 get_header(); ?>
-<div class="wrapper">
-	<div id="primary" class="content-area">
+<div class="wrapper-default-page">
+	<div id="primary" class="content-area  js-blocks">
 		<main id="main" class="site-main" role="main">
+
+		<?php get_template_part('template-parts/subnav'); ?>
 
 			<?php
 			while ( have_posts() ) : the_post();
@@ -32,6 +34,25 @@ get_header(); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
+
+<aside id="secondary" class="widget-area js-blocks" role="complementary">
+	<?php 
+
+$images = get_field('photos');
+
+if( $images ): ?>
+   
+            <?php foreach( $images as $image ): ?>
+                <div>
+                    <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                   
+                </div
+            <?php endforeach; ?>
+        
+<?php endif; ?>
+</aside><!-- #secondary -->
+
+
 </div>
 <?php
 get_footer();
