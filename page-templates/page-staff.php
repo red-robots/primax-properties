@@ -31,7 +31,7 @@ get_header(); ?>
 				<ul class='tabs'>
 					<li><a href='#leadership'>Leadership<span class="border">|</span></a></li>
 					<li><a href='#development'>Development<span class="border">|</span></a></li>
-					<li><a href='#property-management'>Property Management &amp; Leasing<span class="border">|</span></a></li>
+					<li class="long"><a href='#property-management'>Property Management &amp; Leasing<span class="border">|</span></a></li>
 					<li><a href='#construction'>Construction<span class="border">|</span></a></li>
 					<li><a href='#support'>Support<span class="border">|</span></a></li>
 					<li><a href='#all'>All</a></li>
@@ -51,6 +51,7 @@ get_header(); ?>
 				
 				<div id='leadership'>
 					<?php
+					$i=0;
 					$wp_query = new WP_Query();
 					$wp_query->query(array(
 						'post_type'=>'staff',
@@ -67,11 +68,20 @@ get_header(); ?>
 					));
 					if ($wp_query->have_posts()) : ?>
 					<section class="page-projects">
-				    <?php while ($wp_query->have_posts()) :  $wp_query->the_post(); 
+				    <?php while ($wp_query->have_posts()) :  $wp_query->the_post(); $i++; ?>
+				    	<?php 
+				    		if( $i == 4 ) {
+				    			$class = 'last';
+				    			$i=0;
+				    		} else {
+				    			$class = 'first';
+				    		}
+				    	 ?>
+				    	<div class="staff-wrap <?php echo $class; ?>">
+				    		<?php get_template_part('template-parts/staff'); ?>
+				    	</div><!-- staff wrap -->
 
-				    	get_template_part('template-parts/staff');
-
-				     endwhile; endif; 
+				    <?php endwhile; endif; 
 
 				     wp_reset_query();
 				     ?>
@@ -85,6 +95,7 @@ get_header(); ?>
 				
 				<div id='development'>
 					<?php
+					$i=0;
 					$wp_query = new WP_Query();
 					$wp_query->query(array(
 						'post_type'=>'staff',
@@ -101,11 +112,20 @@ get_header(); ?>
 					));
 					if ($wp_query->have_posts()) : ?>
 					<section class="page-projects">
-				    <?php while ($wp_query->have_posts()) :  $wp_query->the_post(); 
+				    <?php while ($wp_query->have_posts()) :  $wp_query->the_post();  $i++; ?>
+				    	<?php 
+				    		if( $i == 4 ) {
+				    			$class = 'last';
+				    			$i=0;
+				    		} else {
+				    			$class = 'first';
+				    		}
+				    	 ?>
+				    	<div class="staff-wrap <?php echo $class; ?>">
+				    		<?php get_template_part('template-parts/staff'); ?>
+				    	</div><!-- staff wrap -->
 
-				    	get_template_part('template-parts/staff');
-
-				     endwhile; endif; 
+				    <?php endwhile; endif; 
 
 				     wp_reset_query();
 				     ?>
@@ -119,6 +139,7 @@ get_header(); ?>
 				
 				<div id='property-management'>
 					<?php
+					$i=0;
 					$wp_query = new WP_Query();
 					$wp_query->query(array(
 						'post_type'=>'staff',
@@ -135,11 +156,20 @@ get_header(); ?>
 					));
 					if ($wp_query->have_posts()) : ?>
 					<section class="page-projects">
-				    <?php while ($wp_query->have_posts()) :  $wp_query->the_post(); 
+				    <?php while ($wp_query->have_posts()) :  $wp_query->the_post(); $i++;  ?>
+				    	<?php 
+				    		if( $i == 4 ) {
+				    			$class = 'last';
+				    			$i=0;
+				    		} else {
+				    			$class = 'first';
+				    		}
+				    	 ?>
+				    	<div class="staff-wrap <?php echo $class; ?>">
+				    		<?php get_template_part('template-parts/staff'); ?>
+				    	</div><!-- staff wrap -->
 
-				    	get_template_part('template-parts/staff');
-
-				     endwhile; endif; 
+				    <?php endwhile; endif; 
 
 				     wp_reset_query();
 				     ?>
@@ -152,6 +182,7 @@ get_header(); ?>
 				######################################################## -->
 				<div id='construction'>
 					<?php
+					$i=0;
 					$wp_query = new WP_Query();
 					$wp_query->query(array(
 						'post_type'=>'staff',
@@ -167,12 +198,21 @@ get_header(); ?>
 						)
 					));
 					if ($wp_query->have_posts()) : ?>
-					<section class="page-projects">
-				    <?php while ($wp_query->have_posts()) :  $wp_query->the_post(); 
+					<section class="page-projects <?php echo $class; ?>">
+				    <?php while ($wp_query->have_posts()) :  $wp_query->the_post(); $i++;  ?>
+				    	<?php 
+				    		if( $i == 4 ) {
+				    			$class = 'last';
+				    			$i=0;
+				    		} else {
+				    			$class = 'first';
+				    		}
+				    	 ?>
+				    	<div class="staff-wrap">
+				    		<?php get_template_part('template-parts/staff'); ?>
+				    	</div><!-- staff wrap -->
 
-				    	get_template_part('template-parts/staff');
-
-				    endwhile; endif; 
+				    <?php endwhile; endif; 
 
 				     wp_reset_query();
 				     ?>
@@ -185,6 +225,7 @@ get_header(); ?>
 				######################################################## -->
 				<div id='support'>
 					<?php
+					$i=0;
 					$wp_query = new WP_Query();
 					$wp_query->query(array(
 						'post_type'=>'staff',
@@ -200,12 +241,21 @@ get_header(); ?>
 						)
 					));
 					if ($wp_query->have_posts()) : ?>
-					<section class="page-projects">
-				    <?php while ($wp_query->have_posts()) :  $wp_query->the_post(); 
+					<section class="page-projects <?php echo $class; ?>">
+				    <?php while ($wp_query->have_posts()) :  $wp_query->the_post();  $i++; ?>
+				    	<?php 
+				    		if( $i == 4 ) {
+				    			$class = 'last';
+				    			$i=0;
+				    		} else {
+				    			$class = 'first';
+				    		}
+				    	 ?>
+				    	<div class="staff-wrap">
+				    		<?php get_template_part('template-parts/staff'); ?>
+				    	</div><!-- staff wrap -->
 
-				    	get_template_part('template-parts/staff');
-
-				     endwhile; endif; 
+				    <?php endwhile; endif; 
 
 				     wp_reset_query();
 				     ?>
@@ -218,6 +268,7 @@ get_header(); ?>
 				######################################################## -->
 				<div id='all'>
 					<?php
+					$i=0;
 					$wp_query = new WP_Query();
 					$wp_query->query(array(
 						'post_type'=>'staff',
@@ -227,12 +278,21 @@ get_header(); ?>
 						
 					));
 					if ($wp_query->have_posts()) : ?>
-					<section class="page-projects">
-				    <?php while ($wp_query->have_posts()) :  $wp_query->the_post(); 
+					<section class="page-projects <?php echo $class; ?>">
+				   <?php while ($wp_query->have_posts()) :  $wp_query->the_post(); $i++;  ?>
+				   	<?php 
+				    		if( $i == 4 ) {
+				    			$class = 'last';
+				    			$i=0;
+				    		} else {
+				    			$class = 'first';
+				    		}
+				    	 ?>
+				    	<div class="staff-wrap">
+				    		<?php get_template_part('template-parts/staff'); ?>
+				    	</div><!-- staff wrap -->
 
-				    	get_template_part('template-parts/staff');
-
-				     endwhile; endif; 
+				    <?php endwhile; endif; 
 
 				     wp_reset_query();
 				     ?>

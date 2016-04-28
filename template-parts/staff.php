@@ -1,4 +1,6 @@
 <?php 
+
+
 $postTitle = get_the_title();
 $real_name = get_field('real_name');
 $size = 'large'; 
@@ -12,8 +14,12 @@ $description_bio = get_field('description_bio');
 
 ?>
 
-<div class="staff-wrap">
-	<?php if( $photo ) {echo wp_get_attachment_image( $photo, $size );} ?>
+
+
+	<?php if( $photo ) { ?>
+		<div class="pic"><?php echo wp_get_attachment_image( $photo, $size ); ?></div>
+	<?php } ?>
+	
 	<div class="info">
 		<div class="quick-bio">
 			<h2><?php echo $postTitle; ?></h2>
@@ -47,4 +53,3 @@ $description_bio = get_field('description_bio');
 	<div class="staff-link">
 		<a href="<?php the_permalink(); ?>">Read Full Bio</a>
 	</div><!-- staff link -->
-</div><!-- staff wrap -->

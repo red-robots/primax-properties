@@ -34,7 +34,10 @@ $sitemapLink = get_field('sitemap_link', 'option');
 				</div>
 
 				<div class="copywrite">&copyCopyright 2016- Primax Properties, LLC. - All Rights Reserved</div>
-				<div class="creds">sitemap | site by bellaworks</div>
+				<div class="creds">
+				<a href="<?php echo $sitemapLink; ?>">sitemap</a>
+				 | site by <a target="_blank" href="http://bellaworksweb.com/?ref=primax">bellaworks</a>
+				</div>
 
 			</div><!-- .site-info -->
 
