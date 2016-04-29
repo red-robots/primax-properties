@@ -11,9 +11,18 @@ $map_border_radius: 0;
 @import "customizations";
 
 
+#states {
+	width: $map_width;
+	height: 640px;
+	margin: 0px auto;
+	position: relative;
+	clear: both;
+}
+
 /*--------------------------------------------------------------
 ## Map Colors
 */
+
 .yes {
   color: $color-green;
 }
@@ -35,24 +44,12 @@ $map_border_radius: 0;
 	padding: 20px;
 	color: rgba(0,0,0,.9);
 }
-.al {
-	width: auto;
-	position: absolute;
-	bottom: 240px;
-    right: 215px;
-}
-.ga {
-	width: auto;
-	position: absolute;
-	bottom: 240px;
-    right: 160px;
-}
 .count {
-	width: 50px;
-	height: 50px;
+	width: 40px;
+	height: 40px;
 	border: 1px solid #333;
-	font-size: 24px;
-	line-height: 50px;
+	font-size: 20px;
+	line-height: 40px;
 	border-radius: 50%;
 	text-align: center;
 	background-color: rgba(255,255,255,.6);
@@ -63,14 +60,218 @@ $map_border_radius: 0;
 	position: absolute;
 	right: -125px;
 	bottom: 70px; 
-	
 	@include transition(all ease .1s);
-	
 }
-#states {
-	width: $map_width;
-	height: 640px;
-	margin: 0px auto;
-	position: relative;
-	clear: both;
+
+
+
+.al, .ak, .ar, .az, .ca, .co, .ct, .de, .dc, .fl, .ga, .hi, .id, .il, .in, .ia, .ks, .ky, .la, .me, .md, .ma, .mi, .mn, .ms, .mo, .mt, .ne, .nv, .nh, .nj, .nm, .ny, .nc, .nd, .oh, .ok, .or, .pa, .ri, .sc, .sd, .tn, .tx, .ut, .va, .vt, .wa, .wv, .wi, .wy
+{
+	width: auto;
+	position: absolute;
 }
+.al {
+	bottom: 240px;
+    right: 215px;
+}
+.ak {
+	bottom: 240px;
+    right: 215px;
+}
+.ar {
+	bottom: 270px;
+    right: 310px;
+}
+.az {
+	bottom: 280px;
+    left: 150px;
+}
+.ca {
+	bottom: 330px;
+    left: 45px;
+}
+.co {
+	bottom: 350px;
+    left: 245px;
+}
+.ct {
+	top: 180px;
+    right: 0px;
+}
+.de {
+	top: 200px;
+    right: 20px;
+}
+.dc {
+	top: 200px;
+    right: 20px;
+}
+.fl{
+	bottom: 160px;
+    right: 115px;
+}
+.ga {
+	bottom: 240px;
+    right: 160px;
+}
+.hi {
+	bottom: 240px;
+    right: 215px;
+}
+.id{
+	top: 130px;
+    left: 135px;
+}
+.il {
+	top: 220px;
+    right: 270px;
+}
+.in {
+	top: 220px;
+    right: 225px;
+}
+.ia {
+	top: 185px;
+    right: 325px;
+}
+.ks {
+	bottom: 340px;
+    right: 400px;
+}
+.ky {
+	bottom: 335px;
+    right: 200px;
+}
+.la {
+	bottom: 180px;
+    right: 295px;
+}
+.me {
+	top: 60px;
+    right: 15px;
+}
+.md {
+	bottom: 240px;
+    right: 215px;
+}
+.ma {
+	bottom: 240px;
+    right: 215px;
+}
+.mi {
+	top: 140px;
+    right: 210px;
+}
+.mn {
+	top: 100px;
+    right: 345px;
+}
+.ms {
+	bottom: 240px;
+    right: 265px;
+}
+.mo {
+	bottom: 330px;
+    right: 310px;
+}
+.mt {
+	top: 80px;
+    left: 215px;
+}
+.ne {
+	bottom: 395px;
+    right: 400px;
+}
+.nv {
+	bottom: 390px;
+    left: 90px;
+}
+.nh {
+	bottom: 240px;
+    right: 215px;
+}
+.nj {
+	top: 200px;
+    right: 20px;
+}
+.nm {
+	bottom: 280px;
+    left: 235px;
+}
+.ny {
+	top: 120px;
+    right: 95px;
+}
+.nc {
+	bottom: 310px;
+    right: 95px;
+}
+.nd {
+	top: 83px;
+    left: 335px;
+}
+.oh {
+	top: 200px;
+    right: 180px;
+}
+.ok {
+	bottom: 283px;
+    right: 385px;
+}
+.or {
+	top: 110px;
+    left: 55px;
+}
+.pa {
+	top: 165px;
+    right: 140px;
+}
+.ri {
+	bottom: 240px;
+    right: 215px;
+}
+.sc {
+	bottom: 270px;
+    right: 120px;
+}
+.sd {
+	top: 138px;
+    left: 335px;
+}
+.tn {
+	bottom: 300px;
+    right: 235px;
+}
+.tx {
+	bottom: 210px;
+    right: 415px;
+}
+.ut {
+	bottom: 370px;
+    left: 165px;
+}
+.va {
+	bottom: 350px;
+    right: 110px;
+}
+.vt {
+	bottom: 240px;
+    right: 215px;
+}
+.wa {
+	top: 48px;
+    left: 85px;
+}
+.wv {
+	top: 230px;
+    right: 145px;
+}
+.wi {
+	top: 130px;
+    right: 285px;
+}
+.wy {
+	top: 160px;
+    left: 230px;
+}
+
