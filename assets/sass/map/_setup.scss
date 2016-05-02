@@ -10,13 +10,21 @@
 
 }
 ul#stately {
-  margin: 0;
-  width: 800px;
-  height: 640px;
   position: relative;
+  width: auto;
+  display: none;
+
+  @media screen and (min-width: $screensize) {
+    display: block;
+    margin: 0;
+    width: 800px;
+    height: 640px;
+
+  }
+   
 }
 .stately {
-   width: 800px;
+  display: none;
   position: relative;
   font: normal normal $map_width "stately-webfont";
   line-height: 100%;
@@ -37,6 +45,11 @@ ul#stately {
 	list-style: none;	
 	background: $map_bgd_color;	
 	border-radius: $map_border_radius;
+
+  @media screen and (min-width: $screensize) {
+    width: 800px;
+    display: block;
+  }
 	
 	li { 
   	float: left;

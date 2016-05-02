@@ -1,6 +1,7 @@
 $map_width: 800px;
 $map_bgd_color: rgba(0,0,0,0);
 $map_border_radius: 0;
+$screensize: $tabwidth;
 
 /** Stately setup
 *************************************/
@@ -12,11 +13,24 @@ $map_border_radius: 0;
 
 
 #states {
-	width: $map_width;
-	height: 640px;
-	margin: 0px auto;
-	position: relative;
-	clear: both;
+	
+
+	@media screen and (min-width: $screensize) {
+		display: block;
+		width: $map_width;
+		height: 640px;
+		margin: 0px auto;
+		position: relative;
+		clear: both;
+	}
+
+	ul {
+		display: none;
+
+		@media screen and (min-width: $screensize) {
+			display: block;
+		}
+	}
 }
 
 /*--------------------------------------------------------------
@@ -43,16 +57,38 @@ $map_border_radius: 0;
 	border: 1px solid #333;
 	padding: 20px;
 	color: rgba(0,0,0,.9);
+	z-index: 100000;
 }
 .count {
-	width: 40px;
-	height: 40px;
-	border: 1px solid #333;
+	float: right;
+
+	@media screen and (min-width: $screensize) {
+		float: none;
+		border: 1px solid #333;
+		border-radius: 50%;
+		text-align: center;
+		background-color: rgba(255,255,255,.6);
+
+	}
+}
+.small-count {
 	font-size: 20px;
 	line-height: 40px;
-	border-radius: 50%;
-	text-align: center;
-	background-color: rgba(255,255,255,.6);
+	width: 40px;
+	height: 40px;
+
+	@media screen and (min-width: $screensize) {
+		font-size: 14px;
+		line-height: 25px;
+		width: 25px;
+		height: 25px;
+	}
+}
+.large-count {
+	font-size: 20px;
+	line-height: 40px;
+	width: 40px;
+	height: 40px;
 }
 #js-target {
 	width: 300px;
@@ -62,216 +98,396 @@ $map_border_radius: 0;
 	bottom: 70px; 
 	@include transition(all ease .1s);
 }
+.stateinfo {
+	border-bottom: 1px solid #eee;
+	overflow: hidden;
 
+	@media screen and (min-width: $screensize) {
+		border-bottom: 0px solid #eee;
+	}
+}
+.state-name {
+	font-size: 20px;
+	width: auto;
+	float: left;
+
+	@media screen and (min-width: $screensize) {
+		display: none;
+	}
+}
 
 
 .al, .ak, .ar, .az, .ca, .co, .ct, .de, .dc, .fl, .ga, .hi, .id, .il, .in, .ia, .ks, .ky, .la, .me, .md, .ma, .mi, .mn, .ms, .mo, .mt, .ne, .nv, .nh, .nj, .nm, .ny, .nc, .nd, .oh, .ok, .or, .pa, .ri, .sc, .sd, .tn, .tx, .ut, .va, .vt, .wa, .wv, .wi, .wy
 {
-	width: auto;
-	position: absolute;
+	width: 100%;
+	position: relative;
+	padding: 5%;
+	clear: both;
+
+	@media screen and (min-width: $screensize) {
+		width: auto;
+		position: absolute;
+		margin: 0;
+		padding: 0;
+		clear: none;
+	}
 }
 .al {
-	bottom: 240px;
-    right: 215px;
+
+	@media screen and (min-width: $screensize) {
+		bottom: 240px;
+	    right: 215px;
+	}
 }
 .ak {
-	bottom: 240px;
-    right: 215px;
+
+	@media screen and (min-width: $screensize) {
+		bottom: 240px;
+	    right: 215px;
+
+	}
 }
 .ar {
-	bottom: 270px;
-    right: 310px;
+
+	@media screen and (min-width: $screensize) {
+		bottom: 270px;
+	    right: 310px;
+	}
 }
 .az {
-	bottom: 280px;
-    left: 150px;
+
+	@media screen and (min-width: $screensize) {
+		bottom: 280px;
+	    left: 150px;
+	}
 }
 .ca {
-	bottom: 330px;
-    left: 45px;
+
+	@media screen and (min-width: $screensize) {
+		bottom: 330px;
+	    left: 45px;
+	}
 }
 .co {
-	bottom: 350px;
-    left: 245px;
+
+	@media screen and (min-width: $screensize) {
+		bottom: 350px;
+	    left: 245px;
+	}
 }
 .ct {
-	top: 180px;
-    right: 0px;
+
+	@media screen and (min-width: $screensize) {
+		top: 170px;
+	    right: 55px;
+	}
 }
 .de {
-	top: 200px;
-    right: 20px;
+
+	@media screen and (min-width: $screensize) {
+		top: 230px;
+	    right: 70px;
+	}
 }
 .dc {
-	top: 200px;
-    right: 20px;
+
+	@media screen and (min-width: $screensize) {
+		top: 230px;
+	    right: 100px;
+	}
 }
-.fl{
-	bottom: 160px;
-    right: 115px;
+.fl {
+
+	@media screen and (min-width: $screensize) {
+		bottom: 160px;
+	    right: 115px;
+	}
 }
 .ga {
-	bottom: 240px;
-    right: 160px;
+
+	@media screen and (min-width: $screensize) {
+		bottom: 240px;
+	    right: 160px;
+	}
 }
 .hi {
-	bottom: 240px;
-    right: 215px;
+
+	@media screen and (min-width: $screensize) {
+		bottom: 240px;
+	    right: 215px;
+	}
 }
-.id{
-	top: 130px;
-    left: 135px;
+.id {
+
+	@media screen and (min-width: $screensize) {
+		top: 130px;
+	    left: 135px;
+	}
 }
 .il {
-	top: 220px;
-    right: 270px;
+
+	@media screen and (min-width: $screensize) {
+		top: 220px;
+	    right: 270px;
+	}
 }
 .in {
-	top: 220px;
-    right: 225px;
+
+	@media screen and (min-width: $screensize) {
+		top: 220px;
+	    right: 225px;
+	}
 }
 .ia {
-	top: 185px;
-    right: 325px;
+
+	@media screen and (min-width: $screensize) {
+		top: 185px;
+	    right: 325px;
+	}
 }
 .ks {
-	bottom: 340px;
-    right: 400px;
+
+	@media screen and (min-width: $screensize) {
+		bottom: 340px;
+	    right: 400px;
+	}
 }
 .ky {
-	bottom: 335px;
-    right: 200px;
+
+	@media screen and (min-width: $screensize) {
+		bottom: 335px;
+	    right: 200px;
+	}
 }
 .la {
-	bottom: 180px;
-    right: 295px;
+
+	@media screen and (min-width: $screensize) {
+		bottom: 180px;
+	    right: 295px;
+	}
 }
 .me {
-	top: 60px;
-    right: 15px;
+
+	@media screen and (min-width: $screensize) {
+		top: 60px;
+	    right: 15px;
+	}
 }
 .md {
-	bottom: 240px;
-    right: 215px;
+
+	@media screen and (min-width: $screensize) {
+		top: 205px;
+	    right: 110px;
+	}
 }
 .ma {
-	bottom: 240px;
-    right: 215px;
+
+	@media screen and (min-width: $screensize) {
+		top: 145px;
+	    right: 30px;
+	}
 }
 .mi {
-	top: 140px;
-    right: 210px;
+
+	@media screen and (min-width: $screensize) {
+		top: 140px;
+	    right: 210px;
+	}
 }
 .mn {
-	top: 100px;
-    right: 345px;
+
+	@media screen and (min-width: $screensize) {
+		top: 100px;
+	    right: 345px;
+	}
 }
 .ms {
-	bottom: 240px;
-    right: 265px;
+
+	@media screen and (min-width: $screensize) {
+		bottom: 240px;
+	    right: 265px;
+	}
 }
 .mo {
-	bottom: 330px;
-    right: 310px;
+
+	@media screen and (min-width: $screensize) {
+		bottom: 330px;
+	    right: 310px;
+	}
 }
 .mt {
-	top: 80px;
-    left: 215px;
+
+	@media screen and (min-width: $screensize) {
+		top: 80px;
+	    left: 215px;
+	}
 }
 .ne {
-	bottom: 395px;
-    right: 400px;
+
+	@media screen and (min-width: $screensize) {
+		bottom: 395px;
+	    right: 400px;
+	}
 }
 .nv {
-	bottom: 390px;
-    left: 90px;
+
+	@media screen and (min-width: $screensize) {
+		bottom: 390px;
+	    left: 90px;
+	}
 }
 .nh {
-	bottom: 240px;
-    right: 215px;
+
+	@media screen and (min-width: $screensize) {
+		top: 120px;
+	    right: 50px;
+	}
 }
 .nj {
-	top: 200px;
-    right: 20px;
+
+	@media screen and (min-width: $screensize) {
+		top: 200px;
+	    right: 70px;
+	}
 }
 .nm {
-	bottom: 280px;
-    left: 235px;
+
+	@media screen and (min-width: $screensize) {
+		bottom: 280px;
+	    left: 235px;
+	}
 }
 .ny {
-	top: 120px;
-    right: 95px;
+
+	@media screen and (min-width: $screensize) {
+		top: 120px;
+	    right: 95px;
+	}
 }
 .nc {
-	bottom: 310px;
-    right: 95px;
+
+	@media screen and (min-width: $screensize) {
+		bottom: 310px;
+	    right: 95px;
+	}
 }
 .nd {
-	top: 83px;
-    left: 335px;
+
+	@media screen and (min-width: $screensize) {
+		top: 83px;
+	    left: 335px;
+	}
 }
 .oh {
-	top: 200px;
-    right: 180px;
+
+	@media screen and (min-width: $screensize) {
+		top: 200px;
+	    right: 180px;
+	}
 }
 .ok {
-	bottom: 283px;
-    right: 385px;
+
+	@media screen and (min-width: $screensize) {
+		bottom: 283px;
+	    right: 385px;
+	}
 }
 .or {
-	top: 110px;
-    left: 55px;
+
+	@media screen and (min-width: $screensize) {
+		top: 110px;
+	    left: 55px;
+	}
 }
 .pa {
-	top: 165px;
-    right: 140px;
+
+	@media screen and (min-width: $screensize) {
+		top: 175px;
+	    right: 130px;
+	}
 }
 .ri {
-	bottom: 240px;
-    right: 215px;
+
+	@media screen and (min-width: $screensize) {
+		top: 170px;
+	    right: 30px;
+	}
 }
 .sc {
-	bottom: 270px;
-    right: 120px;
+
+	@media screen and (min-width: $screensize) {
+		bottom: 270px;
+	    right: 120px;
+	}
 }
 .sd {
-	top: 138px;
-    left: 335px;
+
+	@media screen and (min-width: $screensize) {
+		top: 138px;
+	    left: 335px;
+	}
 }
 .tn {
-	bottom: 300px;
-    right: 235px;
+
+	@media screen and (min-width: $screensize) {
+		bottom: 300px;
+	    right: 235px;
+	}
 }
 .tx {
-	bottom: 210px;
-    right: 415px;
+
+	@media screen and (min-width: $screensize) {
+		bottom: 210px;
+	    right: 415px;
+	}
 }
 .ut {
-	bottom: 370px;
-    left: 165px;
+
+	@media screen and (min-width: $screensize) {
+		bottom: 370px;
+	    left: 165px;
+	}
 }
 .va {
-	bottom: 350px;
-    right: 110px;
+
+	@media screen and (min-width: $screensize) {
+		bottom: 350px;
+	    right: 110px;
+	}
 }
 .vt {
-	bottom: 240px;
-    right: 215px;
+
+	@media screen and (min-width: $screensize) {
+		top: 100px;
+	    right: 70px;
+	}
 }
 .wa {
-	top: 48px;
-    left: 85px;
+
+	@media screen and (min-width: $screensize) {
+		top: 48px;
+	    left: 85px;
+	}
 }
 .wv {
-	top: 230px;
-    right: 145px;
+
+	@media screen and (min-width: $screensize) {
+		top: 230px;
+	    right: 145px;
+	}
 }
 .wi {
-	top: 130px;
-    right: 285px;
+
+	@media screen and (min-width: $screensize) {
+		top: 130px;
+	    right: 285px;
+	}
 }
 .wy {
-	top: 160px;
-    left: 230px;
+
+	@media screen and (min-width: $screensize) {
+		top: 160px;
+	    left: 230px;
+	}
 }
 
