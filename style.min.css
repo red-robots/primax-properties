@@ -1499,14 +1499,20 @@ header.home h2,header.home h3,header.home p{width:100%;text-align:center;weight:
 .homemap{width:80%;margin:30px auto}
 .homemap img{width:100%}
 section.home-projects{background-color:rgba(0,97,64,0.8);overflow:hidden;padding-bottom:10px}
-section.page-projects{background-color:rgba(0,97,64,0);overflow:hidden;padding-bottom:10px}
+section.page-projects{background-color:rgba(0,97,64,0);overflow:hidden;padding-bottom:10px;width:100%}
 .page-proj,.home-proj{width:100%;margin:0 0 10px 0;position:relative;line-height:0}
-@media screen and (min-width:600px){.page-proj,.home-proj{width:32%;float:left;margin:1% 0 0 1%}
+@media screen and (min-width:600px){.page-proj,.home-proj{width:23.7%;float:left;margin:1% 0 0 1%}
 }.page-proj img,.home-proj img{width:100%}
-.page-proj .info,.home-proj .info{width:100%;position:absolute;text-align:center;color:#fff;bottom:0;z-index:20}
+.page-proj .info,.home-proj .info{width:100%;position:absolute;text-align:center;color:#fff;bottom:0;z-index:20;padding-top:5px}
 .page-proj h2,.home-proj h2{width:100%;margin:0 0 5px 0;text-align:center;line-height:1.2;letter-spacing:3px;text-transform:uppercase;font-size:18px;font-weight:300}
-.page-proj p,.home-proj p{font-size:14px;line-height:1;margin:0 0 10px 0}
-.page-proj .view-proj,.home-proj .view-proj{width:100%;height:100%;position:absolute;top:0;left:0;z-index:10}
+@media screen and (min-width:600px){.page-proj h2,.home-proj h2{font-size:10px}
+}@media screen and (min-width:900px){.page-proj h2,.home-proj h2{font-size:14px}
+}@media screen and (min-width:1200px){.page-proj h2,.home-proj h2{font-size:18px}
+}.page-proj p,.home-proj p{font-size:14px;line-height:1;margin:0 0 10px 0}
+@media screen and (min-width:600px){.page-proj p,.home-proj p{font-size:10px}
+}@media screen and (min-width:900px){.page-proj p,.home-proj p{font-size:12px}
+}@media screen and (min-width:1200px){.page-proj p,.home-proj p{font-size:14px}
+}.page-proj .view-proj,.home-proj .view-proj{width:100%;height:100%;position:absolute;top:0;left:0;z-index:10}
 .page-proj .view-proj a,.home-proj .view-proj a{width:100%;height:100%;display:block;text-indent:-9999px;padding:0;-webkit-transition:all ease .3s;transition:all ease .3s}
 .home-proj{color:#fff}
 .home-proj .view-proj a{background-color:rgba(0,97,64,0.8)}

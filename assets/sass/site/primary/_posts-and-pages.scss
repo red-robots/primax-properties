@@ -106,6 +106,7 @@ section.page-projects {
 	background-color: rgba($color-green, 0);
 	overflow: hidden;
 	padding-bottom: 10px;
+	width: 100%;
 }
 .page-proj, .home-proj {
 	width: 100%;
@@ -114,7 +115,7 @@ section.page-projects {
 	line-height: 0;
 
 	@media screen and (min-width: $tabwidth) {
-		width: 32%;
+		width: 23.7%;
 		float: left;
 		margin: 1% 0 0 1%;
 	}
@@ -129,6 +130,7 @@ section.page-projects {
 		color: #fff;
 		bottom: 0;
 		z-index: 20;
+		padding-top: 5px;
 	}
 	h2 {
 		width: 100%;
@@ -141,11 +143,30 @@ section.page-projects {
 			size: 18px;
 			weight: 300;
 		}
+		@media screen and (min-width: $tabwidth) {
+			font-size: 10px;
+		}
+		@media screen and (min-width: $midwidth) {
+			font-size: 14px;
+		}
+		@media screen and (min-width: $deskwidth) {
+			font-size: 18px;
+		}
 	}
 	p {
 		font-size: 14px;
 		line-height: 1;
 		margin: 0 0 10px 0;
+
+		@media screen and (min-width: $tabwidth) {
+			font-size: 10px;
+		}
+		@media screen and (min-width: $midwidth) {
+			font-size: 12px;
+		}
+		@media screen and (min-width: $deskwidth) {
+			font-size: 14px;
+		}
 	}
 	.view-proj {
 		width: 100%;
