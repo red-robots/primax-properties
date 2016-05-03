@@ -17,6 +17,12 @@ jQuery(document).ready(function ($) {
         $(this).addClass("active");
         }
 	});
+
+	$(function() {
+	    if ( document.location.href.indexOf('staff') > -1 ) {
+	        $('li.page-item-160 a').addClass("active");
+	    }
+	});
 	
 	/*
 	*
@@ -118,7 +124,11 @@ jQuery(document).ready(function ($) {
  //      $(this).children('.displaynone').toggleClass("displaynone open"); 
  //      e.preventDefault();
  //    });
-
+/*
+	*
+	*	Map
+	*
+	------------------------------------*/
     $(".stateinfo").hover(
 	  function () {
 	    $(this).children('#js-target').removeClass("displaynone");
@@ -127,6 +137,22 @@ jQuery(document).ready(function ($) {
 	  function () {
 	    $(this).children('#js-target').removeClass("open");
 	    $(this).children('#js-target').addClass("displaynone");
+	  }
+	);
+
+/*
+	*
+	*	Home Project Hovers
+	*
+	------------------------------------*/
+	$(".info").hover(
+	  function () {
+	    $(this).siblings('.js-hover').removeClass("view-proj-off");
+	    $(this).siblings('.js-hover').addClass("view-proj-on" , 1000);
+	  },
+	  function () {
+	    $(this).siblings('.js-hover').removeClass("view-proj-on");
+	    $(this).siblings('.js-hover').addClass("view-proj-off");
 	  }
 	);
 

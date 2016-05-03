@@ -150,10 +150,10 @@ div {
 
 
 	/* Adds a hyphen where the word breaks, if supported (No Blink) */
-	-ms-hyphens: auto;
-	-moz-hyphens: auto;
-	-webkit-hyphens: auto;
-	hyphens: auto;
+	-ms-hyphens: none;
+	-moz-hyphens: none;
+	-webkit-hyphens: none;
+	hyphens: none;
 }
 .wrapper {
 	width: 100%;
@@ -202,7 +202,7 @@ div {
 	margin: 0px auto;
 	
 	@media screen and (min-width: $tabwidth) {
-		width: 66%;
+		width: 62%;
 		float: left;
 		margin: 0;
 	}
@@ -217,7 +217,7 @@ div {
 	background-color: rgba($color-gold, .7);
 	
 	@media screen and (min-width: $tabwidth) {
-		width: 26%;
+		width: 33%;
 		float: right;
 		margin: 0;
 	}

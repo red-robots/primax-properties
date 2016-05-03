@@ -43,13 +43,16 @@ $description_bio = get_field('description_bio');
 			<?php } ?>
 			<div class="position"></div>
 		</div><!-- quick bio -->
-		<div class="full-bio">
-			Full Bio
-			<div class="arrow-title">
-				<i class="fa fa-play  " aria-hidden="true"></i>
-			</div><!-- arrow -->
-		</div><!-- full bio -->
+		
 	</div><!-- info -->
+	
+	<div class="full-bio">
+		Full Bio
+		<div class="arrow-title">
+			<i class="fa fa-play  " aria-hidden="true"></i>
+		</div><!-- arrow -->
+	</div><!-- full bio -->
+
 	<div class="staff-link">
 		<a href="<?php the_permalink(); ?>">Read Full Bio</a>
 	</div><!-- staff link -->

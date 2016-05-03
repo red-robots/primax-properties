@@ -7,7 +7,13 @@
  * @package ACStarter
  */
 
-get_header(); ?>
+get_header(); 
+
+// get this before reseting and calling othe queries
+$images = get_field('gallery');
+$pageTitle = get_the_title();
+
+?>
 <div class="wrapper-default-page">
 	<div id="primary" class="content-area  js-blocks">
 		<main id="main" class="site-main" role="main">
@@ -86,7 +92,7 @@ get_header(); ?>
 		));
 		if ($wp_query->have_posts()) : ?>
 	<section class="contacts">
-	<h2>Contact a member of our development team.</h2>
+	<h2>Contact a member of our <?php echo $pageTitle; ?> team.</h2>
 	    <?php while ($wp_query->have_posts()) :  $wp_query->the_post(); 
 
 		    $postTitle = get_the_title();
@@ -158,60 +164,60 @@ get_header(); ?>
 // If Real Estate Dev, show representative project ( if not show 2 pics )
 if( $ID == 140 ) :
 
-$projects = get_field('representative_projects', 'option');
-if($projects) :
-	shuffle( $projects );
-        $i = 0;
- 
-	foreach($projects as $post) {
+	$projects = get_field('representative_projects', 'option');
+	if($projects) :
+		shuffle( $projects );
+	        $i = 0;
+	 
+		foreach($projects as $post) {
 
-		setup_postdata($post); 
-			       
-        $image = get_field('featured_photo');
-		$size = 'large'; 
-		$title = get_field('alternate_title');
-		$description = get_field('description');
-		$location = get_field('location');
-		//$image = wp_get_attachment_image_src( $projects['image'], 'full');
+			setup_postdata($post); 
+				       
+	        $image = get_field('featured_photo');
+			$size = 'large'; 
+			$title = get_field('alternate_title');
+			$description = get_field('description');
+			$location = get_field('location');
+			//$image = wp_get_attachment_image_src( $projects['image'], 'full');
+			
+			?>
+			<div class="feat-project">
+			<h3>REPRESENTATIVE PROJECT</h3>
+
+			<div class="pic">
+				<?php if( $image ) {echo wp_get_attachment_image( $image, $size );} ?>
+			</div>
+			
+			<h2><?php echo $title; ?></h2>
+			<div class="location"><?php echo $location; ?></div>
+			
+			<div class="description">
+				<?php echo $description; ?>
+			</div>
+
+			<div class="arrow-link">
+				<i class="fa fa-play  " aria-hidden="true"></i>
+			</div><!-- arrow -->
+
+			<div class="proj-link">
+				<a href="<?php the_permalink(); ?>">See Project</a>
+			</div>
+
+			</div><!-- project -->
+			<?php
+	                  if (++$i == 1) break;
+	         }
+	 
 		
-		?>
-		<div class="feat-project">
-		<h3>REPRESENTATIVE PROJECT</h3>
-
-		<div class="pic">
-			<?php if( $image ) {echo wp_get_attachment_image( $image, $size );} ?>
-		</div>
-		
-		<h2><?php echo $title; ?></h2>
-		<div class="location"><?php echo $location; ?></div>
-		
-		<div class="description">
-			<?php echo $description; ?>
-		</div>
-
-		<div class="arrow-link">
-			<i class="fa fa-play  " aria-hidden="true"></i>
-		</div><!-- arrow -->
-
-		<div class="proj-link">
-			<a href="<?php the_permalink(); ?>">See Project</a>
-		</div>
-
-		</div><!-- project -->
-		<?php
-                  if (++$i == 1) break;
-         }
- 
-	
-endif;
+	endif;
+	wp_reset_postdata();
 
 // Else show the 2 pics
 else: 
 
 
 
-$images = get_field('gallery');
-
+// we got this at the top of the page before the other queries
 if( $images ): ?>
     <div>
         <?php foreach( $images as $image ): ?>

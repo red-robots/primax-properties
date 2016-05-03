@@ -23,6 +23,10 @@ setup_postdata( $post );
 	$projectLineTwo = get_field('project_section_line_2');
 	$marketLineOne = get_field('market_section_line_1');
 	$marketLineTwo = get_field('market_section_line_2');
+
+	$lineone = get_field('map_info_box');
+	$linetwo = get_field('map_info_box_line_2');
+	$theLink = get_field('the_link');
  
 wp_reset_postdata();
 
@@ -57,12 +61,14 @@ wp_reset_postdata();
 			        
 			        <div class="home-proj">
 			        	<div class="info">
+			        	<a href="<?php the_permalink(); ?>">
 			        		<h2><?php echo $title; ?></h2>
 			        		<p><?php echo $location; ?></p>
+			        		</a>
 			        	</div><!-- info -->
 			        	
 			        	<?php if( $image ) {echo wp_get_attachment_image( $image, $size );} ?>
-			        	<div class="view-proj"><a href="<?php the_permalink(); ?>">View Project</a></div>
+			        	<div class="view-proj js-hover view-proj-off "><a href="<?php the_permalink(); ?>">View Project</a></div>
 			        </div><!-- home proj -->
 
 			    <?php endforeach; ?>
@@ -81,9 +87,18 @@ wp_reset_postdata();
 			</header>
 
 			<div class="homemap">
-				<a href="<?php bloginfo('url'); ?>/markets">
+				<a href="<?php echo $theLink; ?>">
 					<img src="<?php bloginfo('template_url'); ?>/images/map.jpg">
 				</a>
+
+				<div class="infolink">
+					<div class="view"><?php echo $lineone; ?></div>
+					<div class="link"><?php echo $linetwo; ?></div>
+					<div class="thelink">
+						<a href="<?php echo $theLink; ?>"></a>
+					</div>
+				</div
+
 			</div>
 		
 

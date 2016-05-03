@@ -12,7 +12,21 @@ get_header(); ?>
 
 
 <div class="wrapper">
+<div class="page-subnav">
+<?php 
+	
+	    // This is not a subpage
+	    $ID = get_the_ID();
+	    $arg = array(
+			'child_of' => 156,
+			'title_li' => ''
+		);
+	    //echo '<h3>' . get_the_title($ID) . '</h3>';
+	    wp_list_pages($arg);
 
+	
+	 ?>
+	</div>
 <heading class="staff">Our Professionals</heading>
 
 	<div id="primary" class="content-area-full">
@@ -60,6 +74,8 @@ get_header(); ?>
 						<a href="<?php echo $vcard; ?>">Contact Info</a>
 					</div>
 				<?php } ?>
+
+				
 
 				<div class="staff-border"></div>
 
