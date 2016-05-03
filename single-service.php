@@ -65,7 +65,7 @@ get_header(); ?>
 		
 <?php 
 // Only show the staff query if we're viewing Development
-if( $ID == 140 ) :
+//if( $ID == 140 ) :
  ?>
 
 
@@ -146,7 +146,7 @@ if( $ID == 140 ) :
 	<?php endif; 
 
 
-	endif; // end if Develpment
+	//endif; // end if Develpment
 	?>
 
 		</main><!-- #main -->

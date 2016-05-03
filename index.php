@@ -81,7 +81,9 @@ wp_reset_postdata();
 			</header>
 
 			<div class="homemap">
-				<img src="<?php bloginfo('template_url'); ?>/images/map.jpg">
+				<a href="<?php bloginfo('url'); ?>/markets">
+					<img src="<?php bloginfo('template_url'); ?>/images/map.jpg">
+				</a>
 			</div>
 		
 
