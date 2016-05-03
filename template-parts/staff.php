@@ -30,7 +30,7 @@ $description_bio = get_field('description_bio');
 				<div class="detail"><?php echo $office_phone; ?></div>
 			<?php } ?>
 			<?php if( $email != '' ) { ?>
-				<div class="detail">
+				<div class="detail-email">
 					<a href="mailto:<?php echo antispambot($email); ?>">
 					  <?php echo antispambot($email); ?>
 					</a>

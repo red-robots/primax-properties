@@ -1557,7 +1557,7 @@ ul.tabs{width:100%;margin:0;padding:0;text-align:center}
 }ul.tabs a.active,ul.tabs a:hover{background:#000;color:#fff;border-top:2px solid #006140}
 ul.tabs a.active .border,ul.tabs a:hover .border{display:none}
 .staff-wrap{width:100%;margin:0 0 20px 0;position:relative;overflow:hidden}
-@media screen and (min-width:600px){.staff-wrap{width:20%;margin:2.5%;float:left}
+@media screen and (min-width:600px){.staff-wrap{width:23%;margin:2.5%;float:left}
 }.staff-wrap.first{margin:0 0 30px 0}
 @media screen and (min-width:600px){.staff-wrap.first{margin:0 2.5% 2.5% 0}
 }.staff-wrap.last{margin:0 0 30px 0}
@@ -1569,10 +1569,18 @@ ul.tabs a.active .border,ul.tabs a:hover .border{display:none}
 .staff-wrap .info{width:100%;position:relative;float:left;z-index:10}
 .staff-wrap .quick-bio{width:100%;background-color:#006140;padding:5%;color:#fff;float:left;margin:0;position:relative}
 .staff-wrap .full-bio{width:100%;background-color:#006140;padding:5px 15% 5px 5%;color:#fff;float:left;margin:0;position:relative;text-align:right;-webkit-transition:all .3s ease;transition:all .3s ease}
-.staff-wrap h2{text-transform:uppercase;margin:0;font-size:14px;font-weight:400}
+@media screen and (min-width:600px){.staff-wrap .full-bio{padding:5px 20% 5px 5%}
+}@media screen and (min-width:900px){.staff-wrap .full-bio{padding:5px 18% 5px 5%}
+}@media screen and (min-width:1200px){.staff-wrap .full-bio{padding:5px 15% 5px 5%}
+}.staff-wrap h2{text-transform:uppercase;margin:0;font-size:14px;font-weight:400}
 .staff-wrap .detail{margin:0;font-size:14px;font-weight:400}
 .staff-wrap .detail a{color:#fff;text-decoration:none}
-.staff-wrap .arrow-title{width:20px;height:20px;position:absolute;right:10px;top:5px;-webkit-transition:all .3s ease;transition:all .3s ease}
+.staff-wrap .detail-email{margin:0;font-size:14px;font-weight:400}
+.staff-wrap .detail-email a{color:#fff;text-decoration:none}
+@media screen and (min-width:600px){.staff-wrap .detail-email{font-size:10px}
+}@media screen and (min-width:900px){.staff-wrap .detail-email{font-size:12px}
+}@media screen and (min-width:1200px){.staff-wrap .detail-email{font-size:14px}
+}.staff-wrap .arrow-title{width:20px;height:20px;position:absolute;right:10px;top:5px;-webkit-transition:all .3s ease;transition:all .3s ease}
 .staff-wrap .arrow-title i{color:#ae976d;font-size:20px;-webkit-transition:all .3s ease;transition:all .3s ease}
 .staff-wrap .vcard{width:50px;height:30px;margin:5px 0 0 0}
 .staff-wrap .vcard a{width:50px;height:30px;display:block;text-indent:-9000px;background-image:url(images/vcard.png);background-repeat:no-repeat;background-size:cover}
@@ -1598,8 +1606,10 @@ heading.staff{color:#006140;text-transform:uppercase;letter-spacing:3px;width:10
 section.education{width:100%;margin:0 0 30px 0}
 section.education h2{color:#006140;text-transform:uppercase;margin:0;font-size:14px;font-weight:500}
 .page-subnav{margin:20px 0 30px -15px}
-.page-subnav li{width:auto;display:inline-block;border-right:1px solid #333;padding:0 15px}
-.page-subnav a{border-bottom:3px solid #fff;text-decoration:none;color:#000;padding:0;-webkit-transition:.3s ease all;transition:.3s ease all}
+.page-subnav li{width:100%;text-align:center;display:inline-block;padding:0 15px}
+@media screen and (min-width:600px){.page-subnav li{width:auto;font-size:12px;border-right:1px solid #333}
+}@media screen and (min-width:900px){.page-subnav li{width:auto;font-size:16px}
+}.page-subnav a{border-bottom:3px solid #fff;text-decoration:none;color:#000;padding:0;-webkit-transition:.3s ease all;transition:.3s ease all}
 .page-subnav a.active,.page-subnav a:hover{border-bottom:3px solid #006140}
 .page-subnav li:last-child{border-right:0 solid #333}
 .quick-contact{width:100%;margin:0 0 5px 0;background-color:#e8e8e8;position:relative;overflow:hidden}
