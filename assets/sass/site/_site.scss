@@ -226,7 +226,32 @@ div {
 		padding: 135px 0;
 	}
 }
-
+.contact-area {
+	width: 100%;
+	margin: 0px auto;
+	
+	@media screen and (min-width: $tabwidth) {
+		width: 40%;
+		float: left;
+		margin: 0;
+	}
+	@media screen and (min-width: $deskwidth) {
+		/*width: 1200px;*/
+	}
+}
+.map-area {
+	width: 100%;
+	margin: 0px auto;
+	
+	@media screen and (min-width: $tabwidth) {
+		width: 50%;
+		float: right;
+		margin: 60px 0 0 0;
+	}
+	@media screen and (min-width: $deskwidth) {
+		/*width: 1200px;*/
+	}
+}
 /* Logo */
 .logo , h1.logo {
 	width: 250px;

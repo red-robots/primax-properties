@@ -104,6 +104,7 @@ $screensize: $tabwidth;
 
 	@media screen and (min-width: $screensize) {
 		border-bottom: 0px solid #eee;
+		overflow: visible;
 	}
 }
 .state-name {
