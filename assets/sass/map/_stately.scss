@@ -1,7 +1,7 @@
 $map_width: 800px;
 $map_bgd_color: rgba(0,0,0,0);
 $map_border_radius: 0;
-$screensize: $tabwidth;
+$screensize: $mapwidth;
 
 /** Stately setup
 *************************************/
@@ -61,14 +61,13 @@ $screensize: $tabwidth;
 }
 .count {
 	float: right;
+	border: 1px solid #333;
+	border-radius: 50%;
+	text-align: center;
+	background-color: rgba(255,255,255,.6);
 
 	@media screen and (min-width: $screensize) {
 		float: none;
-		border: 1px solid #333;
-		border-radius: 50%;
-		text-align: center;
-		background-color: rgba(255,255,255,.6);
-
 	}
 }
 .small-count {

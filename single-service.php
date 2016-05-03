@@ -154,7 +154,9 @@ if( $ID == 140 ) :
 	<aside id="secondary" class="widget-area js-blocks" role="complementary">
 	<section class="rep-proj">
 
-	<?php
+<?php
+// If Real Estate Dev, show representative project ( if not show 2 pics )
+if( $ID == 140 ) :
 
 $projects = get_field('representative_projects', 'option');
 if($projects) :
@@ -202,6 +204,27 @@ if($projects) :
  
 	
 endif;
+
+// Else show the 2 pics
+else: 
+
+
+
+$images = get_field('gallery');
+
+if( $images ): ?>
+    <div>
+        <?php foreach( $images as $image ): ?>
+            
+               <!--  <a href="<?php echo $image['url']; ?>"> -->
+                     <img src="<?php echo $image['sizes']['large']; ?>" alt="<?php echo $image['alt']; ?>" />
+                <!-- </a> -->
+                
+        <?php endforeach; ?>
+    </div>
+<?php endif; // end gallery
+
+endif; // end if statement
 ?>
 </section>
 </aside><!-- #secondary -->
