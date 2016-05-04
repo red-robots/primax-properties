@@ -59,15 +59,27 @@
 						$heroLineOne = get_field('hero_line_1');
 						$heroLineTwo = get_field('hero_line_2');
 
-					wp_reset_postdata();
+					
 				?>
 
 				<header class="hero">
 					<h2 class="  wow zoomIn" data-wow-duration=".5s"><?php echo $heroLineOne; ?></h2>
-					<p class="  wow zoomIn" data-wow-duration=".8s"><?php echo $heroLineTwo; ?></p>
+					<?php if(have_rows('hero_line_2')) : ?>
+						<div class="flexslider">
+							<ul class="slides">
+								<?php while(have_rows('hero_line_2')) : the_row(); ?>
+									<li>
+										<p><?php the_sub_field('hero_line_2'); ?></p>
+									</li>
+								<?php endwhile; ?>
+							</ul>
+						</div>
+					<?php endif; ?>
 				</header>
 
-			<?php } ?>
+			<?php 
+			wp_reset_postdata();
+			} ?>
 
 	</div><!-- wrapper -->
 

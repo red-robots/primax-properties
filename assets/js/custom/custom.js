@@ -30,7 +30,9 @@ jQuery(document).ready(function ($) {
 	*
 	------------------------------------*/
 	$('.flexslider').flexslider({
-		animation: "slide",
+		animation: "fade",
+		controlNav: false,
+		directionNav: false
 	}); // end register flexslider
 	
 	/*

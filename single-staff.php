@@ -60,7 +60,10 @@ get_header(); ?>
 					<div class="detail"><?php echo $position; ?></div>
 				<?php } ?>
 				<?php if( $office_phone != '' ) { ?>
-					<div class="detail"><?php echo $office_phone; ?></div>
+					<div class="detail">Office: <?php echo $office_phone; ?></div>
+				<?php } ?>
+				<?php if( $cell_phone != '' ) { ?>
+					<div class="detail">Cell: <?php echo $cell_phone; ?></div>
 				<?php } ?>
 				<?php if( $email != '' ) { ?>
 					<div class="detail">
@@ -71,11 +74,11 @@ get_header(); ?>
 				<?php } ?>
 				<?php if( $vcard != '' ) { ?>
 					<div class="vcard">
-						<a href="<?php echo $vcard; ?>">Contact Info</a>
+						<a href="<?php echo $vcard; ?>">Download Vcard</a>
 					</div>
 				<?php } ?>
 
-				
+
 
 				<div class="staff-border"></div>
 

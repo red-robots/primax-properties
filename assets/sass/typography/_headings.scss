@@ -26,3 +26,26 @@ h1.entry-title-staff {
 	line-height: 1;
 	padding-top: 30px;
 }
+.entry-content {
+	h2 {
+		font: {
+			size: 24px;
+			weight: 400;
+		}
+		color: $color-green;
+		letter-spacing: 3px;
+		text-transform: uppercase;
+		margin: 15px 0 15px 0;
+		line-height: 1;
+
+		&.map-head {
+			margin: 50px 0 0px 0;
+		}
+	}
+}
+
+blockquote {
+	color: #404040;
+	font-size: 1.5em;
+	font-weight: 500;
+}

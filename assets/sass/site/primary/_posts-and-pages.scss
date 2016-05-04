@@ -56,7 +56,12 @@ header.hero {
 		weight: 400;
 	}
 	h2 {
-		font: {size: 20px;}
+		letter-spacing: 3px;
+
+		font: {
+			size: 20px;
+			weight: 300;
+		}
 		@media screen and (min-width: $tabwidth) {
 			font: {size: 16px;}
 		}
@@ -64,11 +69,16 @@ header.hero {
 			font: {size: 18px;}
 		}
 		@media screen and (min-width: $deskwidth) {
+			margin: 20px 0 10px 0;
 			font: {size: 20px;}
 		}
 	}
 	p {
-		font: {size: 24px;}
+		letter-spacing: 2px;
+		font: {
+			size: 24px;
+			weight: 300;
+		}
 		@media screen and (min-width: $tabwidth) {
 			font: {size: 18px;}
 		}
@@ -76,18 +86,42 @@ header.hero {
 			font: {size: 20px;}
 		}
 		@media screen and (min-width: $deskwidth) {
-			font: {size: 24px;}
+			font: {size: 30px;}
+			margin: 0px 0 0 0;
 		}
 	}
 }
 header.home {
-	margin: 50px auto;
+	margin:  80px auto 50px auto;
 	color: $color-green;
 
 	h2, h3, p {
 		width: 100%;
 		text-align: center;
-		weight: 400;
+	}
+	h2 {
+		letter-spacing: 2px;
+		margin: 0px 0 5px 0;
+		font: {
+			weight: 300;
+			size: 28px;
+		}
+	}
+	h3 {
+		margin: 0;
+		font: {
+			weight: 400;
+			size: 32px;
+		}
+		
+	}
+	p {
+		margin: 0;
+		font: {
+			weight: 300;
+			size: 18px;
+		}
+		
 	}
 }
 .homemap {
@@ -154,18 +188,32 @@ section.page-projects {
 	padding-bottom: 10px;
 	width: 100%;
 }
-.page-proj, .home-proj {
+.page-proj {
 	width: 100%;
 	margin: 0 0 10px 0;
 	position: relative;
 	line-height: 0;
 
 	@media screen and (min-width: $tabwidth) {
-		width: 23.7%;
+		width: 24.25%;
+		float: left;
+		margin: 0.6% 0 0 0.6%;
+	}
+}
+.home-proj {
+	width: 100%;
+	margin: 0 0 10px 0;
+	position: relative;
+	line-height: 0;
+
+	@media screen and (min-width: $tabwidth) {
+		width: 32%;
 		float: left;
 		margin: 1% 0 0 1%;
 	}
-
+}
+.page-proj, .home-proj {
+	
 	img {
 		width: 100%;
 	}
@@ -297,6 +345,27 @@ section.page-projects {
 	width: 100%;
 	padding-top: 60px;
 	color: #fff;
+
+	.pop-image {
+		width: 100%;
+		margin: 0 0 20px 0;
+
+		@media screen and (min-width: $tabwidth) {
+			width: 65%;
+			float: left;
+			margin: 0;
+		}
+	}
+	.pop-info {
+		width: 100%;
+		margin: 0;
+
+		@media screen and (min-width: $tabwidth) {
+			width: 30%;
+			float: right;
+			margin: 0;
+		}
+	}
 }
 section.what-we-do {
 	width: 80%;
@@ -312,6 +381,8 @@ section.services {
 	overflow: hidden;
 	background: {
 		color: rgba($color-gold, .4);
+		image: url(images/big-arrow.png);
+		repeat: repeat;
 	}
 
 	@media screen and (min-width: $tabwidth) {
@@ -728,17 +799,18 @@ heading.staff {
 		list-style: none;
 	}
 	.vcard {
-		width: 50px;
+		width: 200px;
 		height: 30px;
 		float: left;
 		margin: 10px 0 20px 0;
 		text-align: left;
 
 		a {
-			width: 50px;
+			width: 200px;
 			height: 30px;
 			display: block;
-			text-indent: -9999px;
+			// text-indent: -9999px;
+			padding: 3px 0 0 60px;
 			background: {
 				position: 0 -30px;
 			}
@@ -851,6 +923,7 @@ section.education {
 	background-color: $color-grey;
 	position: relative;
 	overflow: hidden;
+	padding: 10px;
 
 	&:hover {
 		.photo {
@@ -974,6 +1047,7 @@ section.education {
 	}
 }
 section.contacts {
+	margin: 0 0 30px 0;
 	h2 {
 		font: {
 			weight: 400;
@@ -1048,4 +1122,27 @@ section.rep-proj {
 			display: block;
 		}
 	} // project
+}
+
+section.map-below {
+	text-align: center;
+	margin: -50px 0 50px 0;
+	h3 {
+		font: {
+			size: 20px;
+			weight: 400;
+		}
+		color: $color-green;
+		letter-spacing: 3px;
+		text-transform: uppercase;
+		margin: 15px 0 15px 0;
+		line-height: 1;
+	}
+	p {
+		margin: 0 0 0 0;
+		font: {
+			size: 18px;
+			weight: 400;
+		}
+	}
 }

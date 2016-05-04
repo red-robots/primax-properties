@@ -108,16 +108,16 @@ $pageTitle = get_the_title();
 	    ?>
 
 	    	<div class="quick-contact">
-	    		<?php if( $photo ) { ?>
+	    		<!-- <?php if( $photo ) { ?>
 		    		<div class="photo">
 		    			<?php echo wp_get_attachment_image( $photo, $size ); ?>
-		    		</div><!-- photo -->
-	    		<?php } ?>
+		    		</div>
+	    		<?php } ?> -->
 	    		<div class="qc-info">
 	    			<h3><?php echo $postTitle; ?></h3>
-	    			<?php if( $position != '' ) { ?>
+	    			<!-- <?php if( $position != '' ) { ?>
 	    				<div class="position"><?php echo $position; ?></div>
-	    			<?php } ?>
+	    			<?php } ?> -->
 	    			<div class="full-bio">
 	    				FULL BIO
 	    				<div class="arrow-title">
@@ -127,7 +127,10 @@ $pageTitle = get_the_title();
 	    		</div><!-- qc info -->
 	    		<div class="info-right">
 	    			<?php if( $office_phone != '' ) { ?>
-						<div class="detail"><?php echo $office_phone; ?></div>
+						<div class="detail">Office: <?php echo $office_phone; ?></div>
+					<?php } ?>
+					<?php if( $cell_phone != '' ) { ?>
+						<div class="detail">Cell: <?php echo $cell_phone; ?></div>
 					<?php } ?>
 					<?php if( $email != '' ) { ?>
 						<div class="detail">
@@ -136,11 +139,11 @@ $pageTitle = get_the_title();
 							</a>
 						</div>
 					<?php } ?>
-					<?php if( $vcard != '' ) { ?>
+					<!-- <?php if( $vcard != '' ) { ?>
 						<div class="vcard">
 							<a href="<?php echo $vcard; ?>">Contact Info</a>
-						</div>
-					<?php } ?>
+						</div> 
+					<?php } ?> -->
 	    		</div><!-- info right -->
 	    		<div class="staff-link">
 	    			<a href="<?php the_permalink(); ?>">View Person</a>

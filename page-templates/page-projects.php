@@ -8,6 +8,22 @@ get_header(); ?>
 	<div id="primary" class="content-area-full">
 		<main id="main" class="site-main" role="main">
 
+			<div class="wrapper">
+				<section class="what-we-do">
+					<?php while ( have_posts() ) : the_post(); ?>
+
+						<header class="entry-header">
+							<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+						</header><!-- .entry-header -->
+
+						<div class="entry-content">
+							<?php the_content(); ?>
+						</div><!-- .entry-content -->
+
+					<?php endwhile; // End of the loop.?>
+				</section>
+			</div><!-- wrapper -->
+
 			<?php 
 			// Pull Featured Projects, an ACF relationship field, from theme options
 			$projects = get_field('representative_projects', 'option');
@@ -47,7 +63,8 @@ get_header(); ?>
 
 			    	$postTitle = get_the_title();
 			    	$image = get_field('featured_photo');
-					$size = 'large'; 
+					$sizeFull = 'full'; 
+					$sizeLarge = 'large'; 
 					$title = get_field('alternate_title');
 					$location = get_field('location');
 					$anchor = sanitize_title_with_dashes($postTitle);
@@ -60,22 +77,33 @@ get_header(); ?>
 
 			    <div class="page-proj">
 		        	<div class="info">
-		        		<h2><?php echo $title; ?></h2>
-		        		<p><?php echo $location; ?></p>
+		        		<a class="project" href="<?php echo '#' . $anchor ?>">
+			        		<h2><?php echo $title; ?></h2>
+			        		<p><?php echo $location; ?></p>
+			        	</a>
 		        	</div><!-- info -->
 		        	
-		        	<?php if( $image ) {echo wp_get_attachment_image( $image, $size );} ?>
+		        	<?php if( $image ) {echo wp_get_attachment_image( $image, $sizeLarge );} ?>
 		        	<div class="view-proj"><a class="project" href="<?php echo '#' . $anchor ?>">View Project</a></div>
 		        </div><!-- home proj -->
 
 		        <div style="display: none;">
 		        	<div id="<?php echo $anchor ?>" class="proj-pop">
-		        		<?php if( $image ) {echo wp_get_attachment_image( $image, $size );} ?>
-		        		<h2><?php echo $title; ?></h2>
-		        		<p><?php echo $location; ?></p>
-		        		<div class="sqft"><?php echo 'Sq Footage: ' . $location; ?></div>
-		        		<div class="type"><?php echo 'Type: ' . $type; ?></div>
-		        		<div class="desc"><?php echo $description; ?></div>
+		        		
+		        		<?php if( $image ) { ?>
+		        			<div class="pop-image">
+		        				<?php echo wp_get_attachment_image( $image, $sizeFull ); ?>
+		        			</div>
+		        		<?php } ?>
+
+		        		<div class="pop-info">
+			        		<h2><?php echo $title; ?></h2>
+			        		<p><?php echo $location; ?></p>
+			        		<div class="sqft"><?php echo 'Sq Footage: ' . $location; ?></div>
+			        		<div class="type"><?php echo 'Type: ' . $type; ?></div>
+			        		<div class="desc"><?php echo $description; ?></div>
+		        		</div><!-- pop info -->
+
 		        	</div><!-- proj-pop -->
 		        </div><!-- display none -->
 

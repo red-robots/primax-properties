@@ -50,11 +50,11 @@ if ( ! current_user_can( 'manage_options' ) ) {
 /*-------------------------------------
   Custom WYSIWYG Styles
 ---------------------------------------*/
-function acc_custom_styles($buttons) {
-  array_unshift($buttons, 'styleselect');
-  return $buttons;
-}
-add_filter('mce_buttons_2', 'acc_custom_styles');
+// function acc_custom_styles($buttons) {
+//   array_unshift($buttons, 'styleselect');
+//   return $buttons;
+// }
+// add_filter('mce_buttons_2', 'acc_custom_styles');
 /*
 * Callback function to filter the MCE settings
 */
@@ -65,12 +65,29 @@ function my_mce_before_init_insert_formats( $init_array ) {
  
   $style_formats = array(  
     // Each array child is a format with it's own settings
-    array(  
-      'title' => 'Custom Color',  
-      'block' => 'span',  
-      'classes' => 'custom-color',
-      'wrapper' => true,
+    // array(  
+    //   'title' => 'Custom Color',  
+    //   'inline' => 'span',  
+    //   'classes' => 'custom-color',
+    //   'wrapper' => true,
       
+    // ),
+    array(
+        'title' => 'Header 2',
+        'format' => 'h2',
+        //'icon' => 'bold'
+    ),
+    array(
+        'title' => 'Header 3',
+        'format' => 'h3'
+    ),
+    array(
+        'title' => 'Paragraph',
+        'format' => 'p'
+    ),
+    array(
+        'title' => 'Blockquote',
+        'format' => 'blockquote'
     )
   );  
   // Insert the array, JSON ENCODED, into 'style_formats'

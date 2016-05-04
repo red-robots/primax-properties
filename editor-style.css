@@ -1,3 +1,22 @@
+@import url(https://fonts.googleapis.com/css?family=Hind+Vadodara:400,300,500,600,700);
 .custom-color {
   color: #444;
+}
+body {
+	font-family:  'Hind Vadodara', sans-serif;
+}
+blockquote {
+	color: #404040;
+	font-size: 1.5em;
+	font-weight: 500;
+}
+h2 {
+	font-size: 24px;
+	font-weight: 400;
+	color: #006140;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	margin: 15px 0 15px 0;
+	line-height: 1;
+
 }

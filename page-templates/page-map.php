@@ -8,9 +8,35 @@ get_header(); ?>
 	<div id="primary" class="">
 		<main id="main" class="site-main" role="main">
 
-			<header class="entry-header">
-				<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-			</header><!-- .entry-header -->
+			<div class="wrapper">
+				<section class="what-we-do">
+					<?php while ( have_posts() ) : the_post(); 
+
+					$page_content = get_field('page_content');
+					$heading = get_field('heading');
+					$slogan = get_field('slogan');
+					$extra_line_one = get_field('extra_line_one');
+					$extra_line_two = get_field('extra_line_two');
+
+					?>
+
+						<header class="entry-header">
+							<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+						</header><!-- .entry-header -->
+
+						<div class="entry-content">
+							<?php echo $page_content; ?>
+						</div><!-- .entry-content -->
+
+					<?php endwhile; // End of the loop.?>
+
+					<div class="entry-content">
+					
+						<h2 class="map-head"><?php echo $heading; ?></h2>
+					</div>
+
+				</section>
+			</div><!-- wrapper -->
 <?php
 	
 	$listArray = array();
@@ -156,7 +182,11 @@ get_header(); ?>
 		
 
 				
-			
+			<section class="map-below">
+			<h3><?php echo $slogan; ?></h3>
+				<p><?php echo $extra_line_one; ?></p>
+				<p><?php echo $extra_line_two; ?></p>
+			</section>
 
 
 
