@@ -99,7 +99,7 @@ get_header(); ?>
 		        		<div class="pop-info">
 			        		<h2><?php echo $title; ?></h2>
 			        		<p><?php echo $location; ?></p>
-			        		<div class="sqft"><?php echo 'Sq Footage: ' . $location; ?></div>
+			        		<div class="sqft"><?php echo 'Sq Footage: ' . $sqFootage; ?></div>
 			        		<div class="type"><?php echo 'Type: ' . $type; ?></div>
 			        		<div class="desc"><?php echo $description; ?></div>
 		        		</div><!-- pop info -->
