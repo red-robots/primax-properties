@@ -68,7 +68,7 @@ wp_reset_postdata();
 			        	</div><!-- info -->
 			        	
 			        	<?php if( $image ) {echo wp_get_attachment_image( $image, $size );} ?>
-			        	<div class="view-proj js-hover view-proj-off "><a href="<?php the_permalink(); ?>">View Project</a></div>
+			        	<div class="view-proj js-hover view-proj-off "><a href="<?php the_permalink(); ?>?featured=y">View Project</a></div>
 			        </div><!-- home proj -->
 
 			    <?php endforeach; ?>

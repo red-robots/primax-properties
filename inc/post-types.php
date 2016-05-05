@@ -159,17 +159,17 @@ function build_taxonomies() {
       '_builtin' => true
     ) );
 
-    // register_taxonomy( 'featured_portfolio', 'portfolio',
-    //  array( 
-    //   'hierarchical' => true, // true = acts like categories false = acts like tags
-    //   'label' => 'Featured', 
-    //   'query_var' => true, 
-    //   'rewrite' => true ,
-    //   'show_admin_column' => true,
-    //   'public' => true,
-    //   'rewrite' => array( 'slug' => 'featured' ),
-    //   '_builtin' => true
-    // ) );
+    register_taxonomy( 'featured_portfolio', 'portfolio',
+     array( 
+      'hierarchical' => true, // true = acts like categories false = acts like tags
+      'label' => 'Featured', 
+      'query_var' => true, 
+      'rewrite' => true ,
+      'show_admin_column' => true,
+      'public' => true,
+      'rewrite' => array( 'slug' => 'featured' ),
+      '_builtin' => true
+    ) );
 
     register_taxonomy( 'service_category', array('service', 'staff'),
      array( 

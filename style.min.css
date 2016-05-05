@@ -1679,7 +1679,11 @@ section.rep-proj .feat-project .proj-link a{width:100%;height:100%;position:abso
 section.map-below{text-align:center;margin:-50px 0 50px 0}
 section.map-below h3{font-size:20px;font-weight:400;color:#006140;letter-spacing:3px;text-transform:uppercase;margin:15px 0 15px 0;line-height:1}
 section.map-below p{margin:0;font-size:18px;font-weight:400}
-.blog .format-aside .entry-title,.archive .format-aside .entry-title{display:none}
+article.single-portfolio .pic{width:100%;margin:0 0 20px 0}
+@media screen and (min-width:600px){article.single-portfolio .pic{width:65%;float:left}
+}article.single-portfolio .info{width:100%;margin:0 0 20px 0}
+@media screen and (min-width:600px){article.single-portfolio .info{width:30%;float:right}
+}.blog .format-aside .entry-title,.archive .format-aside .entry-title{display:none}
 .comment-content a{word-wrap:break-word}
 .bypostauthor{display:block}
 #masthead,footer.site-footer{background-image:url(images/header.jpg);background-repeat:no-repeat;background-size:cover}
