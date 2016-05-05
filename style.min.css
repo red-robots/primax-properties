@@ -1679,11 +1679,19 @@ section.rep-proj .feat-project .proj-link a{width:100%;height:100%;position:abso
 section.map-below{text-align:center;margin:-50px 0 50px 0}
 section.map-below h3{font-size:20px;font-weight:400;color:#006140;letter-spacing:3px;text-transform:uppercase;margin:15px 0 15px 0;line-height:1}
 section.map-below p{margin:0;font-size:18px;font-weight:400}
+article.single-portfolio{margin:50px 0 30px 0}
 article.single-portfolio .pic{width:100%;margin:0 0 20px 0}
 @media screen and (min-width:600px){article.single-portfolio .pic{width:65%;float:left}
-}article.single-portfolio .info{width:100%;margin:0 0 20px 0}
+}article.single-portfolio .pic img{width:100%}
+article.single-portfolio .info{width:100%;margin:0 0 20px 0}
 @media screen and (min-width:600px){article.single-portfolio .info{width:30%;float:right}
-}.blog .format-aside .entry-title,.archive .format-aside .entry-title{display:none}
+}article.single-portfolio .location{letter-spacing:3px;text-transform:uppercase;font-size:18px}
+article.single-portfolio .border{width:100%;clear:both;border-bottom:1px solid #006140;margin:5px 0}
+article.single-portfolio .seemore{width:auto;position:relative;clear:both;display:inline-block;padding:5px 25px 5px 0;font-weight:bold}
+article.single-portfolio .seemore a{width:auto;-webkit-transition:all .3s ease;transition:all .3s ease;text-decoration:none;color:#000}
+article.single-portfolio .seemore i{width:20px;height:20px;position:absolute;top:8px;right:0;color:#ae976d;font-size:20px;-webkit-transition:all .3s ease;transition:all .3s ease}
+article.single-portfolio .seemore:hover i{right:-10px}
+.blog .format-aside .entry-title,.archive .format-aside .entry-title{display:none}
 .comment-content a{word-wrap:break-word}
 .bypostauthor{display:block}
 #masthead,footer.site-footer{background-image:url(images/header.jpg);background-repeat:no-repeat;background-size:cover}

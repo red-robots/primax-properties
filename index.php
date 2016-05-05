@@ -42,15 +42,26 @@ wp_reset_postdata();
 
 
 			
-			<?php 
-			// Pull Featured Projects, an ACF relationship field, from theme options
-			$projects = get_field('representative_projects', 'option');
 			
-			if( $projects ): ?>
+			<?php
+				$wp_query = new WP_Query();
+				$wp_query->query(array(
+				'post_type'=>'portfolio',
+				'posts_per_page' => 9,
+				'tax_query' => array(
+					array(
+						'taxonomy' => 'featured_portfolio', // your custom taxonomy
+						'field' => 'slug',
+						'terms' => array( 'featured' ) // the terms (categories) you created
+					)
+				)
+			));
+			if ($wp_query->have_posts()) :  ?>	
+		
 			   <section class="home-projects">
-			    <?php foreach( $projects as $post):  // variable must be called $post (IMPORTANT) 
-			        
-			        setup_postdata($post); 
+			    <?php 
+			        while ($wp_query->have_posts()) : $wp_query->the_post(); 
+			       
 			       
 			        $image = get_field('featured_photo');
 					$size = 'large'; 
@@ -71,11 +82,13 @@ wp_reset_postdata();
 			        	<div class="view-proj js-hover view-proj-off "><a href="<?php the_permalink(); ?>?featured=y">View Project</a></div>
 			        </div><!-- home proj -->
 
-			    <?php endforeach; ?>
+			    <?php //endforeach; ?>
 			    
-			    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+			    	<?php endwhile ?>
 			    </section>
+			
 			<?php endif; ?> 
+			<?php wp_reset_postdata(); ?>
 				
 			
 

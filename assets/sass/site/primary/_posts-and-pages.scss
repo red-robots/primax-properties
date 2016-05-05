@@ -1147,6 +1147,9 @@ section.map-below {
 	}
 }
 article.single-portfolio {
+
+	margin: 50px 0 30px 0;
+
 	.pic {
 		width: 100%;
 		margin: 0 0 20px 0;
@@ -1154,6 +1157,9 @@ article.single-portfolio {
 		@media screen and (min-width: $tabwidth) {
 			width: 65%;
 			float: left;
+		}
+		img {
+			width: 100%;
 		}
 
 
@@ -1171,6 +1177,51 @@ article.single-portfolio {
 	} // info
 
 	.location {
-		
+		letter-spacing: 3px;
+		text-transform: uppercase;
+		font-size: 18px;
+	}
+	.border {
+		width: 100%;
+		clear: both;
+		border-bottom: 1px solid $color-green;
+		margin: 5px 0;
+	}
+	.seemore {
+		width: auto;
+		position: relative;
+		clear: both;
+		display: inline-block;
+		padding: 5px 25px 5px 0;
+		font: {
+			weight: bold;
+		}
+
+		a {
+			width: auto; 
+			
+			@include transition(all .3s ease);
+			text-decoration: none;
+			color: #000; 
+
+		}
+
+
+		i {
+			width: 20px;
+			height: 20px;
+			position: absolute;
+			top: 8px; 
+			right: 0;
+			color: $color-gold;
+			font-size: 20px;
+			@include transition(all .3s ease);
+		}
+
+		&:hover {
+			i {
+				right: -10px;
+			}
+		}
 	}
 }
