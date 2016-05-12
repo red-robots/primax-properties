@@ -135,20 +135,14 @@ get_header(); ?>
 		'title' => $sTitle
     ));
 
-    // final count
-    //if( $numProp != '' ) {array_push($stateCount, $numProp);}
-
     $total += $numProp;
-    echo $total;
 	
 
     endwhile;
     endif; 
     // End Loop
 
-    // echo '<pre>';
-	// print_r($listArray);
-	// echo '</pre>';
+    
     ?>	
 
 <div id="states">
@@ -169,6 +163,7 @@ get_header(); ?>
 
 		foreach( $numArray as $numDesc ) { 
 					$myNum =  $numDesc['num'];
+
 					if( $myNum !== '' ) { $stateClass = 'stateinfo'; } else { $stateClass = 'stateno'; }
 					
 					echo '<div class="' . $stateClass . ' ' . $numDesc['datastate'] . '">';
@@ -185,6 +180,8 @@ get_header(); ?>
 						}
 
 					echo '</div>'; // close it so it's a child
+
+				}
 
 				// get the total number
 				$intTotal = (int)$total;
@@ -214,4 +211,5 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 </div><!-- wrapper -->
+
 <?php get_footer(); ?>
