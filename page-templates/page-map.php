@@ -214,7 +214,4 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 </div><!-- wrapper -->
-<?php
-
-get_footer();
-?>
+<?php get_footer(); ?>
