@@ -41,7 +41,7 @@ get_header(); ?>
 	
 	$listArray = array();
 	$numArray = array();
-	$stateCount = array();
+	$total = 0;
 
 	$wp_query = new WP_Query();
 	$wp_query->query(array(
@@ -136,7 +136,10 @@ get_header(); ?>
     ));
 
     // final count
-    if( $numProp != '' ) {array_push($stateCount, $numProp);}
+    //if( $numProp != '' ) {array_push($stateCount, $numProp);}
+
+    $total += $numProp;
+    echo $total;
 	
 
     endwhile;
@@ -162,7 +165,7 @@ get_header(); ?>
 
 		<?php 
 
-		$totalCount = 0;
+		//$totalCount = 0;
 
 		foreach( $numArray as $numDesc ) { 
 					$myNum =  $numDesc['num'];
@@ -173,7 +176,7 @@ get_header(); ?>
 						echo '<div class="state-name">'. $numDesc['title'] . '</div>';
 
 						if( $myNum !== '' ) {
-							echo '<div class="count ' . $numDesc['size'] . ' wow zoomIn">' . $myNum . '</div>';
+							echo '<div class="count counter ' . $numDesc['size'] . ' wow zoomIn">' . $myNum . '</div>';
 						}
 
 						// Show hover only if we have something...
@@ -183,33 +186,17 @@ get_header(); ?>
 
 					echo '</div>'; // close it so it's a child
 
-					// Run total Count
-					// if( $myNum !== '' ) { 
-					// 	$totalCount += $myNum;
-					// }
-				}	
-
-				//var_dump($stateCount);
-				// foreach ($stateCount as $count ) {
-				// 	//$totalCount = $totalCount + $count;
-				// }
-				// echo '<pre>';
-				// print_r($stateCount);
-				// echo '</pre>';
-				$string = $stateCount;
-
-				$comma_separated = implode(",", $stateCount);
-					//echo $comma_separated;
-				$integerIDs = array_map('intval', explode(',', $comma_separated));
-				//echo $integerIDs;
-				//var_dump($integerIDs);
-
-				//$a = array($comma_separated);
-
-				$bo = array_sum($integerIDs);
+				// get the total number
+				$intTotal = (int)$total;
+				
 			?>
-
-			<div class="total-count count"><?php echo 'Total: ' . $bo; ?></div>
+			<div class="total-count">
+				Total: 
+				<div class="count totalnum">
+				<?php echo $intTotal; ?>
+				</div>
+			</div>
+			
 
 			
 	</div><!-- stately -->

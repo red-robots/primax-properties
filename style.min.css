@@ -1336,14 +1336,15 @@ ul#stately{position:relative;width:auto;display:none}
 .no-properties{color:#ae976d}
 .displaynone{max-height:0;background-color:rgba(255,255,255,0);border:0 solid #333;padding:0 20px 0;overflow:hidden;color:transparent}
 .open{max-height:1000px;background-color:rgba(255,255,255,0.9);border:1px solid #333;padding:20px;color:rgba(0,0,0,0.9);z-index:100000}
-.count{float:right;border:1px solid #333;border-radius:50%;text-align:center;background-color:rgba(255,255,255,0.6)}
-@media screen and (min-width:820px){.count{float:none}
+.counter{float:right;border:1px solid #333;border-radius:50%;text-align:center;background-color:rgba(255,255,255,0.6)}
+@media screen and (min-width:820px){.counter{float:none}
 }.small-count{font-size:20px;line-height:40px;width:40px;height:40px}
 @media screen and (min-width:820px){.small-count{font-size:14px;line-height:25px;width:25px;height:25px}
 }.large-count{font-size:20px;line-height:40px;width:40px;height:40px}
 .total-count{width:100%;position:relative;padding:5%;clear:both;font-size:20px}
-@media screen and (min-width:820px){.total-count{line-height:40px;width:auto;position:absolute;bottom:5px;right:10px}
-}#js-target{width:300px;height:auto;position:absolute;right:-125px;bottom:70px;-webkit-transition:all ease .1s;transition:all ease .1s}
+@media screen and (min-width:820px){.total-count{line-height:40px;width:135px;position:absolute;bottom:200px;right:-30px;font-size:30px;padding:0}
+}.totalnum{width:auto;float:right;margin:0 0 0 10px}
+#js-target{width:300px;height:auto;position:absolute;right:-125px;bottom:70px;-webkit-transition:all ease .1s;transition:all ease .1s}
 .stateinfo{border-bottom:1px solid #eee;overflow:hidden}
 @media screen and (min-width:820px){.stateinfo{border-bottom:0 solid #eee;overflow:visible}
 }.state-name{font-size:20px;width:auto;float:left}
