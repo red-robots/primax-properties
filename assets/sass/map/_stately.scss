@@ -89,6 +89,22 @@ $screensize: $mapwidth;
 	width: 40px;
 	height: 40px;
 }
+.total-count {
+	width: 100%;
+	position: relative;
+	padding: 5%;
+	clear: both;
+	font-size: 20px;
+	
+
+	@media screen and (min-width: $screensize) {
+		line-height: 40px;
+		width: auto;
+		position: absolute; 
+		bottom: 5px;
+		right: 10px;
+	}
+}
 #js-target {
 	width: 300px;
 	height: auto;

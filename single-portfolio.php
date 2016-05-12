@@ -9,8 +9,12 @@
 
 get_header(); 
 
+if( isset($_GET['featured']) ) {
+	$isFeat = $_GET['featured'];
+} else {
+	$isFeat = 'n';
+}
 
-$isFeat = $_GET['featured'];
 
 if( $isFeat == 'y' ) :
 
@@ -84,12 +88,68 @@ endif; // if is featured
 	</div><!-- #primary -->
 </div>
 
-<div class="next-staff">
-	<?php next_post_link( '%link', 'NEXT', TRUE, ' ', 'featured_portfolio' ); ?>
-</div>
-<div class="prev-staff">
-	<?php previous_post_link( '%link', 'BACK', TRUE, ' ', 'featured_portfolio' ); ?>
-</div>
+<?php 
+if( get_adjacent_post(true, '', false, 'featured_portfolio') ) { ?>
+
+	<div class="prev-staff">
+		<?php next_post_link( '%link', 'PREVIOUS', TRUE, ' ', 'featured_portfolio' ); ?>
+	</div>
+
+<?php } else { 
+	$args = array(
+		'post_type'=>'portfolio',
+		'posts_per_page' => 1, 
+		'order' => 'ASC',
+		'tax_query' => array(
+			array(
+				'taxonomy' => 'featured_portfolio', // your custom taxonomy
+				'field' => 'slug',
+				'terms' => array( 'featured' ) // the terms (categories) you created
+			)
+		)
+	);
+
+    $first = new WP_Query($args); 
+    $first->the_post(); ?>
+
+    <div class="prev-staff">
+    	<?php echo '<a href="' . get_permalink() . '?featured=y">PREVIOUS</a>'; ?>
+    </div>
+  	<?php wp_reset_query();
+}; 
+
+if( get_adjacent_post(true, '', true, 'featured_portfolio') ) { ?>
+
+	<div class="next-staff">
+		<?php previous_post_link( '%link', 'NEXT', TRUE, ' ', 'featured_portfolio' ); ?>
+	</div>
+
+<?php } else { 
+	$args = array(
+		'post_type'=>'portfolio',
+		'posts_per_page' => 1, 
+		'order' => 'DESC',
+		'tax_query' => array(
+			array(
+				'taxonomy' => 'featured_portfolio', // your custom taxonomy
+				'field' => 'slug',
+				'terms' => array( 'featured' ) // the terms (categories) you created
+			)
+		)
+	);
+
+    $first = new WP_Query($args); 
+    $first->the_post(); ?>
+
+    <div class="next-staff">
+		<?php echo '<a href="' . get_permalink() . '?featured=y">NEXT</a>'; ?>
+	</div>
+  	<?php wp_reset_query();
+}; 
+ ?>
+
+
+
 
 
 <?php

@@ -31,7 +31,7 @@ get_header(); ?>
 				<ul class='tabs'>
 					<li><a href='#leadership'>Leadership<span class="border">|</span></a></li>
 					<li><a href='#development'>Development<span class="border">|</span></a></li>
-					<li class="long"><a href='#property-management'>Property Management &amp; Leasing<span class="border">|</span></a></li>
+					<li class="long"><a href='#property-management'>Property Management<span class="border">|</span></a></li>
 					<li><a href='#construction'>Construction<span class="border">|</span></a></li>
 					<li><a href='#support'>Support<span class="border">|</span></a></li>
 					<li><a href='#all'>All</a></li>
@@ -51,12 +51,13 @@ get_header(); ?>
 				
 				<div id='leadership'>
 					<?php
+					remove_all_filters('posts_orderby');
 					$i=0;
 					$wp_query = new WP_Query();
 					$wp_query->query(array(
 						'post_type'=>'staff',
 						'posts_per_page' => -1,
-						'order' => 'ASC',
+						'order' => 'DESC',
 						'orderby' => 'menu_order',
 						'tax_query' => array(
 							array(
@@ -95,12 +96,13 @@ get_header(); ?>
 				
 				<div id='development'>
 					<?php
+					remove_all_filters('posts_orderby');
 					$i=0;
 					$wp_query = new WP_Query();
 					$wp_query->query(array(
 						'post_type'=>'staff',
 						'posts_per_page' => -1,
-						'order' => 'ASC',
+						'order' => 'DESC',
 						'orderby' => 'menu_order',
 						'tax_query' => array(
 							array(
@@ -139,12 +141,13 @@ get_header(); ?>
 				
 				<div id='property-management'>
 					<?php
+					remove_all_filters('posts_orderby');
 					$i=0;
 					$wp_query = new WP_Query();
 					$wp_query->query(array(
 						'post_type'=>'staff',
 						'posts_per_page' => -1,
-						'order' => 'ASC',
+						'order' => 'DESC',
 						'orderby' => 'menu_order',
 						'tax_query' => array(
 							array(
@@ -182,12 +185,13 @@ get_header(); ?>
 				######################################################## -->
 				<div id='construction'>
 					<?php
+					remove_all_filters('posts_orderby');
 					$i=0;
 					$wp_query = new WP_Query();
 					$wp_query->query(array(
 						'post_type'=>'staff',
 						'posts_per_page' => -1,
-						'order' => 'ASC',
+						'order' => 'DESC',
 						'orderby' => 'menu_order',
 						'tax_query' => array(
 							array(
@@ -225,12 +229,13 @@ get_header(); ?>
 				######################################################## -->
 				<div id='support'>
 					<?php
+					remove_all_filters('posts_orderby');
 					$i=0;
 					$wp_query = new WP_Query();
 					$wp_query->query(array(
 						'post_type'=>'staff',
 						'posts_per_page' => -1,
-						'order' => 'ASC',
+						'order' => 'DESC',
 						'orderby' => 'menu_order',
 						'tax_query' => array(
 							array(
@@ -268,12 +273,13 @@ get_header(); ?>
 				######################################################## -->
 				<div id='all'>
 					<?php
+					remove_all_filters('posts_orderby');
 					$i=0;
 					$wp_query = new WP_Query();
 					$wp_query->query(array(
 						'post_type'=>'staff',
 						'posts_per_page' => -1,
-						'order' => 'ASC',
+						'order' => 'DESC',
 						'orderby' => 'menu_order',
 						
 					));

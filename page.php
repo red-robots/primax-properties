@@ -36,7 +36,7 @@ get_header(); ?>
 	</div><!-- #primary -->
 
 <aside id="secondary" class="widget-area js-blocks" role="complementary">
-	<?php 
+<?php 
 
 $images = get_field('photos');
 
@@ -46,11 +46,12 @@ if( $images ): ?>
                 <div>
                     <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
                    
-                </div
+                </div>
             <?php endforeach; ?>
         
 <?php endif; ?>
-</aside><!-- #secondary -->
+</aside>
+<!-- #secondary -->
 
 
 </div>

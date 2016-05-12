@@ -46,13 +46,18 @@ $description_bio = get_field('description_bio');
 		
 	</div><!-- info -->
 	
-	<div class="full-bio">
-		Full Bio
-		<div class="arrow-title">
-			<i class="fa fa-play  " aria-hidden="true"></i>
-		</div><!-- arrow -->
-	</div><!-- full bio -->
+	<?php if( !has_term( 'support', 'service_category') ) { ?>
 
-	<div class="staff-link">
-		<a href="<?php the_permalink(); ?>">Read Full Bio</a>
-	</div><!-- staff link -->
+		<div class="full-bio">
+			Full Bio
+			<div class="arrow-title">
+				<i class="fa fa-play  " aria-hidden="true"></i>
+			</div><!-- arrow -->
+		</div><!-- full bio -->
+
+	
+		<div class="staff-link">
+			<a href="<?php the_permalink(); ?>">Read Full Bio</a>
+		</div><!-- staff link -->
+		
+	<?php } ?>
