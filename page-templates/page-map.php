@@ -146,6 +146,7 @@ get_header(); ?>
     ?>	
 
 <div id="states">
+
 		<ul class="stately" > 
 			<?php 
 
@@ -195,7 +196,7 @@ get_header(); ?>
 			</div>
 			
 
-			
+		<div class="state-lines"></div>	
 	</div><!-- stately -->
 		
 
@@ -203,7 +204,10 @@ get_header(); ?>
 			<section class="map-below">
 			<h3><?php echo $slogan; ?></h3>
 				<p><?php echo $extra_line_one; ?></p>
-				<p><?php echo $extra_line_two; ?></p>
+				<p>
+				<a href="<?php bloginfo('url'); ?>/contact-us"><?php echo $extra_line_two; ?></a>
+				
+				</p>
 			</section>
 
 

@@ -104,14 +104,20 @@ header.home {
 		margin: 0px 0 5px 0;
 		font: {
 			weight: 300;
-			size: 28px;
+			size: 22px;
+		}
+		@media screen and (min-width: $tabwidth) {
+			font-size: 28px;
 		}
 	}
 	h3 {
 		margin: 0;
 		font: {
 			weight: 400;
-			size: 32px;
+			size: 24px;
+		}
+		@media screen and (min-width: $tabwidth) {
+			font-size: 32px;
 		}
 		
 	}
@@ -119,7 +125,10 @@ header.home {
 		margin: 0;
 		font: {
 			weight: 300;
-			size: 18px;
+			size: 14px;
+		}
+		@media screen and (min-width: $tabwidth) {
+			font-size: 18px;
 		}
 		
 	}
