@@ -35,7 +35,7 @@ header.hero {
 	border-bottom: 1px solid $color-green;
 
 	@media screen and (min-width: $tabwidth) {
-		width: 60%;
+		width: 50%;
 		position: absolute;
 		bottom: 10px;
 		right: 0;
@@ -54,6 +54,7 @@ header.hero {
 		width: 100%;
 		text-align: center;
 		weight: 400;
+
 	}
 	h2 {
 		letter-spacing: 3px;
@@ -75,6 +76,7 @@ header.hero {
 	}
 	p {
 		letter-spacing: 2px;
+		line-height: 1;
 		font: {
 			size: 24px;
 			weight: 300;
@@ -376,6 +378,23 @@ section.page-projects {
 		}
 	}
 }
+#main {
+	width: 100%;
+	position: relative;
+}
+.backtohome {
+	width: auto;
+	position: absolute;
+	display: inline-block;
+	font-size: 18px;
+	top: -30px;
+	right: 10px;
+	
+	a {
+		text-decoration: none;
+		color: $color-green;
+	}
+}
 section.what-we-do {
 	width: 80%;
 	margin: 0 auto;
@@ -383,16 +402,19 @@ section.what-we-do {
 	overflow: hidden;
 	padding-bottom: 50px;
 }
-section.services {
-	width: 100%;
-	position: relative;
-	padding: 30px 0 20px 0;
-	overflow: hidden;
+section.services, .widget-area {
 	background: {
 		color: rgba($color-gold, .4);
 		image: url(images/big-arrow.png);
 		repeat: repeat;
 	}
+}
+section.services {
+	width: 100%;
+	position: relative;
+	padding: 30px 0 20px 0;
+	overflow: hidden;
+	
 
 	@media screen and (min-width: $tabwidth) {
 		padding: 30px 0 20px 0;
@@ -587,6 +609,7 @@ ul.tabs {
 	margin: 0 0 20px 0;
 	position: relative;
 	overflow: hidden;
+	background-color: $color-green;
 
 	@media screen and (min-width: $tabwidth) {
 		width: 20%;
@@ -1135,7 +1158,7 @@ section.rep-proj {
 
 section.map-below {
 	text-align: center;
-	margin: -50px 0 50px 0;
+	margin: -0px 0 50px 0;
 	h3 {
 		font: {
 			size: 20px;

@@ -19,7 +19,7 @@ $screensize: $mapwidth;
 		display: block;
 		width: $map_width;
 		height: 640px;
-		margin: -50px auto 0px auto;
+		margin: -50px auto 50px auto;
 		position: relative;
 		clear: both;
 	}
@@ -90,7 +90,7 @@ $screensize: $mapwidth;
 	height: 40px;
 
 }
-.total-count {
+.total-counts {
 	width: 100%;
 	position: relative;
 	padding: 5%;
@@ -100,19 +100,43 @@ $screensize: $mapwidth;
 
 	@media screen and (min-width: $screensize) {
 		line-height: 40px;
-		width: 135px;
+		width: 600px;
 		position: absolute; 
-		bottom: 200px;
-	    right: -30px;
-	    font-size: 30px;
+		bottom: 0px;
+	    right: 90px;
 	    padding: 0;
 	}
+
+	.totals-col {
+		width: 33%;
+		float: left;
+	}
+
+	.totalnum {
+		width: 100%; 
+		float:  left; 
+		margin: 0 0 10px 0px;
+		color: $color-green;
+		font-size: 30px;
+		text-align: center;
+	}
+	.totals-border {
+		width: 50%; 
+		clear: both;
+		margin: 5px auto;
+		border-bottom: 3px solid $color-green;
+	}
+
+	.total-title {
+		width: 100%; 
+		float:  left;
+		font-size: 20px;
+		color: $color-green;
+		text-align: center;
+	}
+
 }
-.totalnum {
-	width: auto; 
-	float:  right; 
-	margin: 0 0 0 10px;
-}
+
 #js-target {
 	width: 300px;
 	height: auto;

@@ -17,6 +17,7 @@ get_header(); ?>
 					$slogan = get_field('slogan');
 					$extra_line_one = get_field('extra_line_one');
 					$extra_line_two = get_field('extra_line_two');
+					$totalSquareFootage = get_field('total_square_footage');
 
 					?>
 
@@ -42,6 +43,7 @@ get_header(); ?>
 	$listArray = array();
 	$numArray = array();
 	$total = 0;
+	$stateCount = 0;
 
 	$wp_query = new WP_Query();
 	$wp_query->query(array(
@@ -61,6 +63,7 @@ get_header(); ?>
     // Set the class based off if there are properties
     if($numProp != '') {
     	$class = 'yes';
+    	$stateCount++;
     } else {
     	$class = 'no-properties';
     }
@@ -188,12 +191,34 @@ get_header(); ?>
 				$intTotal = (int)$total;
 				
 			?>
-			<div class="total-count">
-				Total: 
-				<div class="count totalnum">
-				<?php echo $intTotal; ?>
-				</div>
-			</div>
+			<div class="total-counts">
+				
+				<div class="totals-col">
+					<div class="count totalnum">
+						<?php echo $intTotal; ?>
+					</div>
+					<div class="totals-border"></div>
+					<div class="total-title">PROJECTS</div>
+				</div><!-- projects -->
+
+				<div class="totals-col">
+					<div class="count totalnum">
+						<?php echo $totalSquareFootage; ?>
+					</div>
+					<div class="totals-border"></div>
+					<div class="total-title">SQUARE FOOTAGE</div>
+				</div><!-- projects -->
+
+				<div class="totals-col">
+					<div class="count totalnum">
+						<?php echo $stateCount; ?>
+					</div>
+					<div class="totals-border"></div>
+					<div class="total-title">STATES</div>
+				</div><!-- projects -->
+				
+				
+			</div><!-- total counts -->
 			
 
 		<div class="state-lines"></div>	

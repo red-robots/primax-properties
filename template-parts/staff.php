@@ -21,7 +21,7 @@ $description_bio = get_field('description_bio');
 	<?php } ?>
 	
 	<div class="info">
-		<div class="quick-bio">
+		<div class="quick-bio ">
 			<h2><?php echo $postTitle; ?></h2>
 			<?php if( $position != '' ) { ?>
 				<div class="detail"><?php echo $position; ?></div>

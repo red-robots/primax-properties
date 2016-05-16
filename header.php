@@ -21,6 +21,17 @@
 </head>
 
 <body <?php body_class(); ?>>
+<?php 
+// jquery flag
+if( is_front_page() ) { ?>
+<style type="text/css">
+.main-navigation li.homebutton {
+	display: none;
+}
+</style>
+<?php } 
+
+?>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'acstarter' ); ?></a>
 

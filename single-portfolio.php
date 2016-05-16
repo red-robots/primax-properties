@@ -29,6 +29,12 @@ endif; // if is featured
 	<div id="primary" class="content-area-full">
 		<main id="main" class="site-main" role="main">
 
+<div class="backtohome">
+<a href="<?php bloginfo('url'); ?>">BACK</a>
+
+</div>
+
+
 		<?php
 		while ( have_posts() ) : the_post();
 
@@ -57,7 +63,7 @@ endif; // if is featured
 					<div class="location"><?php echo $location; ?></div>
 					<?php if($sq_footage != '') { ?>
 						<div class="size">
-							<?php echo $sq_footage; ?>
+							Size: <?php echo $sq_footage; ?> SF
 						</div>
 					<?php } ?>
 

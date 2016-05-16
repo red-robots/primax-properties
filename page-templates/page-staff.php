@@ -78,7 +78,7 @@ get_header(); ?>
 				    			$class = 'first';
 				    		}
 				    	 ?>
-				    	<div class="staff-wrap <?php echo $class; ?>">
+				    	<div class="staff-wrap <?php echo $class; ?> js-blocks">
 				    		<?php get_template_part('template-parts/staff'); ?>
 				    	</div><!-- staff wrap -->
 
@@ -123,7 +123,7 @@ get_header(); ?>
 				    			$class = 'first';
 				    		}
 				    	 ?>
-				    	<div class="staff-wrap <?php echo $class; ?>">
+				    	<div class="staff-wrap <?php echo $class; ?>  js-blocks">
 				    		<?php get_template_part('template-parts/staff'); ?>
 				    	</div><!-- staff wrap -->
 
@@ -212,7 +212,7 @@ get_header(); ?>
 				    			$class = 'first';
 				    		}
 				    	 ?>
-				    	<div class="staff-wrap">
+				    	<div class="staff-wrap js-blocks">
 				    		<?php get_template_part('template-parts/staff'); ?>
 				    	</div><!-- staff wrap -->
 
@@ -256,7 +256,7 @@ get_header(); ?>
 				    			$class = 'first';
 				    		}
 				    	 ?>
-				    	<div class="staff-wrap">
+				    	<div class="staff-wrap js-blocks">
 				    		<?php get_template_part('template-parts/staff'); ?>
 				    	</div><!-- staff wrap -->
 
@@ -294,7 +294,7 @@ get_header(); ?>
 				    			$class = 'first';
 				    		}
 				    	 ?>
-				    	<div class="staff-wrap">
+				    	<div class="staff-wrap js-blocks">
 				    		<?php get_template_part('template-parts/staff'); ?>
 				    	</div><!-- staff wrap -->
 

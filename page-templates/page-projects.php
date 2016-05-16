@@ -84,11 +84,11 @@ get_header(); ?>
 		        	</div><!-- info -->
 		        	
 		        	<?php if( $image ) {echo wp_get_attachment_image( $image, $sizeLarge );} ?>
-		        	<div class="view-proj"><a class="project" href="<?php echo '#' . $anchor ?>">View Project</a></div>
+		        	<div class="view-proj"><a rel="js-proj-group" class="project " href="<?php echo '#' . $anchor ?>">View Project</a></div>
 		        </div><!-- home proj -->
 
 		        <div style="display: none;">
-		        	<div id="<?php echo $anchor ?>" class="proj-pop">
+		        	<div id="<?php echo $anchor ?>" class="proj-pop inline" >
 		        		
 		        		<?php if( $image ) { ?>
 		        			<div class="pop-image">

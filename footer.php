@@ -49,5 +49,7 @@ $sitemapLink = get_field('sitemap_link', 'option');
 
 <?php wp_footer(); ?>
 <?php the_field('google_analytics', 'option'); ?>
+
+
 </body>
 </html>

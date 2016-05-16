@@ -23,6 +23,14 @@ jQuery(document).ready(function ($) {
 	        $('li.page-item-160 a').addClass("active");
 	    }
 	});
+
+	// $(function() {
+	//      if($("#homepage-flag").length > 0) {
+	//      	$('.main-navigation li.homebutton').css("display": "none");
+	//      }
+	// });
+
+	
 	
 	/*
 	*
@@ -46,12 +54,25 @@ jQuery(document).ready(function ($) {
 		height: '80%'
 	});
 	
-	// For the projects
+	//For the projects
 	$(".project").colorbox({
 		inline:true, 
 		width:"80%",
-		rel:'gal'
+		rel:'js-proj-group',
+		href:$(this).attr('href')
 	});
+
+	// var $group = $('.project').colorbox({
+	// 	inline:true, 
+	// 	rel:'inline', 
+	// 	href: function(){
+ //            return $(this).children();
+	// 	      }
+	// 	  });
+ //      $('#open').on('click', function(e){
+ //            e.preventDefault();
+ //            $group.eq(0).click();
+ //      });
 	
 	/*
 	*
