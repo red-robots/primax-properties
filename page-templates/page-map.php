@@ -190,6 +190,9 @@ get_header(); ?>
 				// get the total number
 				$intTotal = (int)$total;
 				
+
+				// Format with commas
+				$english_format_number = number_format($totalSquareFootage);
 			?>
 			<div class="total-counts">
 				
@@ -202,8 +205,8 @@ get_header(); ?>
 				</div><!-- projects -->
 
 				<div class="totals-col">
-					<div class="count totalnum">
-						<?php echo $totalSquareFootage; ?>
+					<div class=" totalnum">
+						<?php echo $english_format_number; ?>
 					</div>
 					<div class="totals-border"></div>
 					<div class="total-title">SQUARE FOOTAGE</div>

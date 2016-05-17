@@ -24,11 +24,11 @@ jQuery(document).ready(function ($) {
 	    }
 	});
 
-	// $(function() {
-	//      if($("#homepage-flag").length > 0) {
-	//      	$('.main-navigation li.homebutton').css("display": "none");
-	//      }
-	// });
+	$(function() {
+	     if ( document.location.href.indexOf('staff') > -1 ) {
+	     	$('.main-navigation li.homebutton').css("display", "none");
+	     }
+	});
 
 	
 	

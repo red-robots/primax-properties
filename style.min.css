@@ -1341,10 +1341,11 @@ ul#stately{position:relative;width:auto;display:none}
 .counter{float:right;border:1px solid #333;border-radius:50%;text-align:center;background-color:rgba(255,255,255,0.6)}
 @media screen and (min-width:820px){.counter{float:none}
 }.large-count,.small-count{font-size:20px;line-height:40px;width:40px;height:40px}
-.total-counts{width:100%;position:relative;padding:5%;clear:both;font-size:20px}
-@media screen and (min-width:820px){.total-counts{line-height:40px;width:600px;position:absolute;bottom:0;right:90px;padding:0}
-}.total-counts .totals-col{width:33%;float:left}
-.total-counts .totalnum{width:100%;float:left;margin:0 0 10px 0;color:#006140;font-size:30px;text-align:center}
+.total-counts{width:100%;position:relative;padding:5%;clear:both;font-size:20px;margin:0 0 30px 0;overflow:hidden}
+@media screen and (min-width:820px){.total-counts{line-height:40px;width:600px;position:absolute;bottom:0;right:90px;padding:0;margin:0}
+}.total-counts .totals-col{width:100%;float:left;margin:0 0 30px 0}
+@media screen and (min-width:820px){.total-counts .totals-col{width:33%;margin:0}
+}.total-counts .totalnum{width:100%;float:left;margin:0 0 10px 0;color:#006140;font-size:30px;text-align:center}
 .total-counts .totals-border{width:50%;clear:both;margin:5px auto;border-bottom:3px solid #006140}
 .total-counts .total-title{width:100%;float:left;font-size:20px;color:#006140;text-align:center}
 #js-target{width:300px;height:auto;position:absolute;right:-125px;bottom:70px;-webkit-transition:all ease .1s;transition:all ease .1s}
@@ -1560,7 +1561,7 @@ section.page-projects{background-color:rgba(0,97,64,0);overflow:hidden;padding-b
 }.proj-pop .pop-info{width:100%;margin:0}
 @media screen and (min-width:600px){.proj-pop .pop-info{width:30%;float:right;margin:0}
 }#main{width:100%;position:relative}
-.backtohome{width:auto;position:absolute;display:inline-block;font-size:18px;top:-30px;right:10px}
+.backtohome{width:auto;position:absolute;display:inline-block;font-size:18spx;top:-30px;right:10px}
 .backtohome a{text-decoration:none;color:#006140}
 section.what-we-do{width:80%;margin:0 auto;text-align:center;overflow:hidden;padding-bottom:50px}
 section.services,.widget-area{background-color:rgba(174,151,109,0.4);background-image:url(images/big-arrow.png);background-repeat:repeat}
