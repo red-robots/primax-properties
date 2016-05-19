@@ -171,6 +171,22 @@ function wpb_change_title_text( $title ){
 }
  
 add_filter( 'enter_title_here', 'wpb_change_title_text' );
+
+
+// function filter_single_post_pagination($url) {
+//     return $url . '?featured=y';
+// }
+// add_filter( 'previous_post_link', 'filter_single_post_pagination', 10, 4 );
+// add_filter( 'next_post_link',     'filter_single_post_pagination', 10, 4 );
+
+// add_filter('next_post_link', 'post_link_attributes');
+// add_filter('previous_post_link', 'post_link_attributes');
+ 
+// function post_link_attributes($output) {
+//     $code = 'class="styled-button"';
+//     return str_replace('<a href=', '<a '.$code.' href=', $output.'?featured=y');
+// }
+
 /*-------------------------------------
 
   Add V card support

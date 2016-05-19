@@ -61,6 +61,33 @@ jQuery(document).ready(function ($) {
 		rel:'js-proj-group',
 		href:$(this).attr('href')
 	});
+	$(".project-2").colorbox({
+		inline:true, 
+		width:"80%",
+		rel:'js-proj-group',
+		href:$(this).attr('href')
+	});
+
+	/*
+	*
+	*	Projects
+	*
+	------------------------------------*/
+	// $('.project').colorbox({
+	// 	// inline:true,
+	// 	iframe: true,
+	// 	rel: 'js-proj-group',
+	// 	width: '100%', 
+	// 	height: '100%',
+	// 	fastIframe: false
+	// 	// scrolling: true
+	// 	 //fixed: true
+	// });
+	// $(document).bind('cbox_open', function() {
+	//     $('html').css({ overflow: 'hidden' });
+	// }).bind('cbox_closed', function() {
+	//     $('html').css({ overflow: '' });
+	// });
 
 	// var $group = $('.project').colorbox({
 	// 	inline:true, 

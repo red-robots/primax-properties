@@ -76,15 +76,20 @@ get_header(); ?>
 
 
 			    <div class="page-proj">
+			    <a rel="js-proj-group" class="project " href="<?php echo '#' . $anchor ?>">
 		        	<div class="info">
-		        		<a class="project" href="<?php echo '#' . $anchor ?>">
+		        		
+
 			        		<h2><?php echo $title; ?></h2>
 			        		<p><?php echo $location; ?></p>
-			        	</a>
+			        
 		        	</div><!-- info -->
 		        	
 		        	<?php if( $image ) {echo wp_get_attachment_image( $image, $sizeLarge );} ?>
-		        	<div class="view-proj"><a rel="js-proj-group" class="project " href="<?php echo '#' . $anchor ?>">View Project</a></div>
+		        	<!-- <div class="view-proj">
+		        	View Project
+		        	</div> -->
+		        	</a>
 		        </div><!-- home proj -->
 
 		        <div style="display: none;">
