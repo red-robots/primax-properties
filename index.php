@@ -48,6 +48,8 @@ wp_reset_postdata();
 				$wp_query->query(array(
 				'post_type'=>'portfolio',
 				'posts_per_page' => 9,
+				'order' => 'ASC', 
+				'orderby' => 'menu_order',
 				'tax_query' => array(
 					array(
 						'taxonomy' => 'featured_portfolio', // your custom taxonomy
