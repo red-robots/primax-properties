@@ -1650,13 +1650,14 @@ heading.staff{color:#006140;text-transform:uppercase;letter-spacing:3px;width:10
 .staff-border{width:60%;float:left;margin:20px 0 30px 0;border-top:1px solid #006140;clear:both}
 .single-staff-bio{width:100%;clear:both}
 .next-staff,.prev-staff{width:auto;text-align:center;margin:2px 0}
-@media screen and (min-width:600px){.next-staff,.prev-staff{position:fixed;margin:0}
+@media screen and (min-width:600px){.next-staff,.prev-staff{display:inline-block;margin:0 0 0 20px}
+}@media screen and (min-width:1200px){.next-staff,.prev-staff{position:fixed;margin:0}
 }.next-staff a,.prev-staff a{background-color:#006140;color:#fff;text-decoration:none;display:block;padding:8px 20px;-webkit-transition:all .3s ease;transition:all .3s ease}
-@media screen and (min-width:600px){.next-staff{top:45%;right:0}
-}.next-staff a:hover{padding:8px 30px 8px 20px}
-@media screen and (min-width:600px){.prev-staff{top:45%;left:0}
-}.prev-staff a:hover{padding:8px 20px 8px 30px}
-section.education{width:100%;margin:0 0 30px 0}
+@media screen and (min-width:1200px){.next-staff{top:45%;right:0}
+}@media screen and (min-width:1200px){.next-staff a:hover{padding:8px 30px 8px 20px}
+}@media screen and (min-width:1200px){.prev-staff{top:45%;left:0}
+}@media screen and (min-width:1200px){.prev-staff a:hover{padding:8px 20px 8px 30px}
+}section.education{width:100%;margin:0 0 30px 0}
 section.education h2{color:#006140;text-transform:uppercase;margin:0;font-size:14px;font-weight:500}
 .page-subnav{margin:20px 0 30px -15px}
 .page-subnav li{width:100%;text-align:center;display:inline-block;padding:0 15px}

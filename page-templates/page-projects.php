@@ -24,30 +24,7 @@ get_header(); ?>
 				</section>
 			</div><!-- wrapper -->
 
-			<?php 
-			// Pull Featured Projects, an ACF relationship field, from theme options
-			$projects = get_field('representative_projects', 'option');
 			
-			if( $projects ):
-
-				// Set up an array to put our featured in so we can query everything but them
-				$ids = array();
-
-				foreach( $projects as $post):  // variable must be called $post (IMPORTANT) 
-				        
-				    setup_postdata($post); 
-				    // get the post ID
-				    $id = get_the_ID();
-
-				    // Put it in our array
-				    $ids[] = $id;
-
-				endforeach;
-			// reset the $post object so the rest of the page works correctly
-			wp_reset_postdata(); 
-
-			endif;
-			 ?>
 
 
 			<?php
@@ -55,7 +32,15 @@ get_header(); ?>
 				$wp_query->query(array(
 					'post_type'=>'portfolio',
 					'posts_per_page' => -1,
-					'post__not_in' => $ids
+					'order' => 'ASC', 
+					'orderby' => 'menu_order',
+					'tax_query' => array(
+						array(
+							'taxonomy' => 'featured_portfolio', // your custom taxonomy
+							'field' => 'slug',
+							'terms' => array( 'representative' ) // the terms (categories) you created
+						)
+					)
 				));
 				if ($wp_query->have_posts()) : ?>
 				<section class="page-projects">

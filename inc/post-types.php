@@ -147,17 +147,17 @@ add_action( 'init', 'build_taxonomies', 0 );
 function build_taxonomies() {
 // cusotm tax
     
-    register_taxonomy( 'project_type', 'portfolio',
-     array( 
-      'hierarchical' => true, // true = acts like categories false = acts like tags
-      'label' => 'Project Type', 
-      'query_var' => true, 
-      'rewrite' => true ,
-      'show_admin_column' => true,
-      'public' => true,
-      'rewrite' => array( 'slug' => 'project-type' ),
-      '_builtin' => true
-    ) );
+    // register_taxonomy( 'project_type', 'portfolio',
+    //  array( 
+    //   'hierarchical' => true, // true = acts like categories false = acts like tags
+    //   'label' => 'Project Type', 
+    //   'query_var' => true, 
+    //   'rewrite' => true ,
+    //   'show_admin_column' => true,
+    //   'public' => true,
+    //   'rewrite' => array( 'slug' => 'project-type' ),
+    //   '_builtin' => true
+    // ) );
 
     register_taxonomy( 'featured_portfolio', 'portfolio',
      array( 

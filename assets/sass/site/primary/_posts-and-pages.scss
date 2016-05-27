@@ -869,6 +869,11 @@ heading.staff {
 	margin: 2px 0;
 	
 	@media screen and (min-width: $tabwidth) {
+		// position: fixed;
+		display: inline-block;
+		margin: 0 0 0 20px;
+	}
+	@media screen and (min-width: $deskwidth) {
 		position: fixed;
 		margin: 0;
 	}
@@ -884,25 +889,29 @@ heading.staff {
 }
 
 .next-staff {
-	@media screen and (min-width: $tabwidth) {
+	@media screen and (min-width: $deskwidth) {
 		top: 45%;
 		right: 0;
 	}
 
 	a {
 		&:hover {
-			padding: 8px 30px 8px 20px;
+			@media screen and (min-width: $deskwidth) {
+				padding: 8px 30px 8px 20px;
+			}
 		}
 	}
 }
 .prev-staff {
-	@media screen and (min-width: $tabwidth) {
+	@media screen and (min-width: $deskwidth) {
 		top: 45%;
 		left: 0;
 	}
 	a {
 		&:hover {
-			padding: 8px 20px 8px 30px;
+			@media screen and (min-width: $deskwidth) {
+				padding: 8px 20px 8px 30px;
+			}
 		}
 	}
 }
