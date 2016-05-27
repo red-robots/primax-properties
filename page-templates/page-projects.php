@@ -48,7 +48,7 @@ get_header(); ?>
 
 			    	$postTitle = get_the_title();
 			    	$image = get_field('featured_photo');
-					$sizeFull = 'full'; 
+					$sizeFull = 'large'; 
 					$sizeLarge = 'medium'; 
 					$title = get_field('alternate_title');
 					$location = get_field('location');
