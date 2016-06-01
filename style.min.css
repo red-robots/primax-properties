@@ -1499,11 +1499,15 @@ header.hero{margin:70px auto;color:#000;width:100%;float:left;border-top:1px sol
 @media screen and (min-width:600px){header.hero{width:50%;position:absolute;bottom:0;right:0;left:0;margin:0 auto;float:none;color:#fff;border-top:0 solid #006140;border-bottom:0 solid #006140}
 }@media screen and (min-width:900px){header.hero{bottom:10px}
 }@media screen and (min-width:1200px){header.hero{bottom:50px}
+}header.hero .big-logo{display:none;text-indent:-9000px;background-image:url(images/wall-logo.png);background-size:cover;background-repeat:no-repeat}
+@media screen and (min-width:600px){header.hero .big-logo{width:350px;height:89px;display:block;margin:0 auto 0 auto}
+}@media screen and (min-width:900px){header.hero .big-logo{width:500px;height:127px;margin:0 auto 20px auto}
+}@media screen and (min-width:1200px){header.hero .big-logo{width:650px;height:165px}
 }header.hero h2,header.hero h3,header.hero p{width:100%;text-align:center;weight:400}
 header.hero h2{letter-spacing:3px;font-size:20px;font-weight:300}
-@media screen and (min-width:600px){header.hero h2{font-size:16px}
+@media screen and (min-width:600px){header.hero h2{font-size:16px;margin:0 0 10px 0}
 }@media screen and (min-width:900px){header.hero h2{font-size:18px}
-}@media screen and (min-width:1200px){header.hero h2{margin:20px 0 10px 0;font-size:20px}
+}@media screen and (min-width:1200px){header.hero h2{margin:20px 0 20px 0;font-size:20px}
 }header.hero p{letter-spacing:2px;line-height:1;font-size:24px;font-weight:300}
 @media screen and (min-width:600px){header.hero p{font-size:18px}
 }@media screen and (min-width:900px){header.hero p{font-size:20px}
@@ -1715,8 +1719,8 @@ article.single-portfolio .seemore:hover i{right:-10px}
 .bypostauthor{display:block}
 #masthead,footer.site-footer{background-image:url(images/header.jpg);background-repeat:no-repeat;background-size:cover}
 #masthead{width:100%;height:150px;position:relative}
-#masthead-home{width:100%;height:200px;position:relative;background-image:url(images/header.jpg);background-repeat:no-repeat;background-size:cover}
-@media screen and (min-width:600px){#masthead-home{height:350px;background-image:url(images/home-header.jpg);background-repeat:no-repeat;background-size:cover}
+#masthead-home{width:100%;height:200px;position:relative;background-image:url(images/header.jpg);background-image:url(images/wall.png);background-repeat:no-repeat;background-size:cover}
+@media screen and (min-width:600px){#masthead-home{height:350px;background-image:url(images/wall.png);background-repeat:no-repeat;background-size:cover}
 }@media screen and (min-width:900px){#masthead-home{height:450px}
 }@media screen and (min-width:1200px){#masthead-home{height:550px}
 }.arrow{width:50px;height:50px;position:absolute;bottom:-20px;left:0;right:0;margin:0 auto;z-index:30}

@@ -38,6 +38,7 @@
 	position: relative;
 	background: {
 		image: url(images/header.jpg);
+		image: url(images/wall.png);
 		repeat: no-repeat;
 		size: cover;
 	}
@@ -45,7 +46,8 @@
 	@media screen and (min-width: $tabwidth) {
 		height: 350px;
 		background: {
-			image: url(images/home-header.jpg);
+			// image: url(images/home-header.jpg);
+			image: url(images/wall.png);
 			repeat: no-repeat;
 			size: cover;
 		}

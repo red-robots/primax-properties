@@ -74,6 +74,9 @@ if( is_front_page() ) { ?>
 				?>
 
 				<header class="hero">
+
+				<div class="big-logo">Primax Properties</div>
+
 					<h2 class="  wow zoomIn" data-wow-duration=".5s"><?php echo $heroLineOne; ?></h2>
 					<?php if(have_rows('hero_line_2')) : ?>
 						<div class="flexslider">

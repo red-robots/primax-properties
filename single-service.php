@@ -80,7 +80,7 @@ $pageTitle = get_the_title();
 		$wp_query->query(array(
 			'post_type'=>'staff',
 			'posts_per_page' => -1,
-			'order' => 'ASC',
+			'order' => 'DESC',
 			'orderby' => 'menu_order',
 			'tax_query' => array(
 				array(
