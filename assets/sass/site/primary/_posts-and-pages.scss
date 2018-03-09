@@ -564,13 +564,12 @@ ul.tabs {
 		width: 100%;
 		display: inline-block;
 		list-style: none;
-		margin: 0 0 0 -0px;
 		float: left;
 		font-size: 14px;
 		text-align: center;
 
 		@media screen and (min-width: $tabwidth) {
-			width: 15%;
+			width: 12%;
 			font-size: 12px;
 		}
 		@media screen and (min-width: $midwidth) {
@@ -578,12 +577,16 @@ ul.tabs {
 		}
 		@media screen and (min-width: $deskwidth) {
 			font-size: 16px;
+			width: 15%;
 		}
 	}
 	li.long {
 		width: 100%;
 		@media screen and (min-width: $tabwidth) {
-			width: 25%;
+			width: 26%;
+		}
+		@media screen and (min-width: $deskwidth) {
+			width: 20%;
 		}
 	}
 	a {

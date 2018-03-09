@@ -32,7 +32,7 @@ get_header(); ?>
 					<li><a href='#leadership'>Leadership<span class="border">|</span></a></li>
 					<li><a href='#development'>Development<span class="border">|</span></a></li>
 					<li class="long"><a href='#property-management'>Property Management<span class="border">|</span></a></li>
-					<li><a href='#construction'>Construction<span class="border">|</span></a></li>
+					<li class="long"><a href='#construction'>Construction Management<span class="border">|</span></a></li>
 					<li><a href='#support'>Support<span class="border">|</span></a></li>
 					<li><a href='#all'>All</a></li>
 				</ul>

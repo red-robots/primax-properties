@@ -1,11 +1,11 @@
 {
-  "name"      : "Primax Properties",
+  "name"      : "Primax-Properties",
   "author"    : "accrane",
   "version"   : "1.0.0",
   "license"   : "GPL-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/accrane/primax-properties"
+    "url": "https://github.com/red-robots/primax-properties"
   },
   "dependencies"   : {},
   "devDependencies": {
