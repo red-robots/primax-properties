@@ -33,7 +33,7 @@ $sitemapLink = get_field('sitemap_link', 'option');
 				 	<i class="fa fa-linkedin fa-2x" aria-hidden="true"><a href="<?php echo $linkedin; ?>">linkedin</a></i>
 				</div>
 
-				<div class="copywrite">&copyCopyright 2016- Primax Properties, LLC. - All Rights Reserved</div>
+				<div class="copywrite">&copyCopyright <?php echo date('Y'); ?>- Primax Properties, LLC. - All Rights Reserved</div>
 				<div class="creds">
 				<a href="<?php echo $sitemapLink; ?>">sitemap</a>
 				 | site by <a target="_blank" href="http://bellaworksweb.com/?ref=primax">bellaworks</a>

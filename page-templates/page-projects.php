@@ -60,7 +60,7 @@ get_header(); ?>
 			    ?>
 
 
-			    <div class="page-proj">
+			    <div class="page-proj js-blocks">
 			    <a rel="js-proj-group" class="project " href="<?php echo '#' . $anchor ?>">
 		        	<div class="info">
 		        		
