@@ -103,7 +103,7 @@ wp_reset_postdata();
 
 			<div class="homemap">
 				<a href="<?php echo $theLink; ?>">
-					<img src="<?php bloginfo('template_url'); ?>/images/homepage-map-1.png">
+					<img src="<?php bloginfo('template_url'); ?>/images/homepage-map-2.png">
 				</a>
 
 				<div class="infolink">
