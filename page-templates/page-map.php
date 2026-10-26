@@ -138,7 +138,7 @@ get_header(); ?>
 		'title' => $sTitle
     ));
 
-    $total += $numProp;
+    $total += (int) $numProp;
 	
 
     endwhile;
